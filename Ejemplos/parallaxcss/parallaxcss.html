@@ -1,0 +1,197 @@
+<!-- @ Como crear un sencillo efecto parallax usando solo CSS
+     @ author Agustín Baraza (contacto@nosolocss.com)
+     @ Copyright 2014 nosolocss.com. All rights reserved
+     @ http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+     @ link http://www.nosolocss.com -->
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<link href='http://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
+<title>Efecto parallax con CSS</title>
+
+<style>
+body {
+	margin:0;
+	padding:0;
+	border:0;
+	font-family: 'Black Ops One', cursive;
+}
+.image1 {
+	position:relative;
+	background: url('universo.jpg') no-repeat fixed;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 500px;
+
+
+}
+
+.image2 {
+	position:relative;
+	background: url('universo2.jpg') no-repeat fixed;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 500px;
+
+
+}
+.image3 {
+	position:relative;
+	background: url('universo3.jpg') no-repeat fixed;
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 500px;
+
+}
+
+h1 {
+	color: #fff;
+	font-size: 80px;
+	text-align:center;
+	font-weight: bold;
+	margin: 0 auto;
+	width: 800px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -20%;
+	margin-left: -400px;
+	opacity:0.8;
+}
+
+h2{
+	color: #fff;
+	font-size: 55px;
+	text-align:center;
+	margin: 0 auto;
+	width: 800px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -400px;
+	opacity:0.8;
+
+
+}
+
+.content {
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	position: relative;
+	background: #FFF;
+	z-index:2;
+
+}
+p {
+	font-family: Georgia, Times, "Times New Roman", serif;
+	font-size: 22px;
+	line-height: 40px;
+	margin: 30px 0;
+}
+
+
+a{
+	color: #fff;
+	text-decoration:none;
+	opacity:0.8;
+
+}
+
+#box
+{
+	overflow:hidden;
+	float: left;
+	width: 300px;
+	height: 300px;
+	border: 2px solid #000;
+	transform:perspective(500px) rotateZ(45deg);
+	-ms-transform:perspective(500px) rotateZ(45deg);
+	-moz-transform:perspective(500px) rotateZ(45deg);
+	-webkit-transform:perspective(500px) rotateZ(45deg);
+	-o-transform:perspective(500px) rotateZ(45deg);
+}
+
+
+
+.contenedor
+{
+	width: 422px;
+	height: 422px;
+	border: 2px solid #000;
+
+	background: url(123.jpg) no-repeat center center ;
+
+
+
+	transform:rotate(-45deg) translateY(-90px);
+	-ms-transform:rotate(-45deg) translateY(-90px); /* IE */
+	-moz-transform:rotate(-45deg) translateY(-90px); /* Firefox */
+	-webkit-transform:rotate(-45deg) translateY(-90px); /* Safari and Chrome */
+	-o-transform:rotate(-45deg) translateY(-90px); /* Opera */
+
+	filter:alpha(opacity=50);
+	opacity:0.5;
+}
+
+.contenedor:hover
+{
+	filter:alpha(opacity=100);
+	opacity:1;
+}
+</style>
+
+</head>
+<body>
+
+<div class="image1">
+	<h1>NOSOLOCSS</h1>
+	<h2>EFECTO PARALLAX CON MULTIPLES FONDOS</h2>
+</div>
+
+<section class="content">
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu posuere dui. Phasellus ultrices rutrum viverra. Duis rhoncus elementum facilisis. Donec venenatis diam eu venenatis venenatis. Duis at erat ac nisl adipiscing varius. Integer tincidunt neque egestas quam sodales tempus. Nulla tristique nisi facilisis congue pellentesque. Sed orci elit, dignissim accumsan nibh ut, vulputate fermentum est. Curabitur in ipsum viverra, interdum diam vel, aliquet lorem. Pellentesque lobortis, mauris pellentesque faucibus pretium, nulla nisi eleifend justo, rutrum pulvinar neque magna eget felis.</p>
+	<p>Cras aliquet sem quis placerat lacinia. Ut quis libero nec nibh malesuada vulputate sed lacinia justo. Quisque sodales felis quam, vel consequat neque ornare vel. Nam faucibus aliquam leo, a pulvinar metus dignissim vitae. Etiam eu congue risus. Quisque hendrerit tellus magna. Morbi eu mi dolor. Phasellus hendrerit tellus et leo sagittis ultrices. Cras nibh nunc, convallis sed erat ac, volutpat luctus ligula. Sed id mi scelerisque, posuere orci malesuada, sagittis lectus. Maecenas massa lorem, porttitor eu ipsum ut, aliquet dictum est. Pellentesque a enim et arcu egestas viverra. Proin sed elementum sapien, et euismod arcu. Suspendisse eu laoreet ligula.</p>
+	<p>Pellentesque euismod cursus nulla non luctus. Praesent id tincidunt leo. Nulla in viverra diam. Nunc fringilla diam id erat dignissim faucibus. Donec mattis eget massa laoreet pharetra. Maecenas in massa feugiat, elementum dolor vitae, consequat sem. Ut vel consectetur magna. Phasellus dui nulla, elementum vitae faucibus id, consequat ac ante. Nulla consectetur, ante sit amet porta egestas, orci diam tincidunt urna, nec eleifend elit augue quis tortor. Etiam nec elit sit amet mi viverra vehicula.</p>
+</section>
+
+
+<div class="image2">
+	<h2>CREADO SOLO CON CSS</h2>
+</div>
+
+<section class="content">
+	<p>Suspendisse porta non sem eu eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam id augue quis nibh egestas ultrices eget et justo. Pellentesque a tempor quam. Nam blandit turpis nisi, at sodales quam convallis vel. Aliquam rhoncus, massa ut gravida auctor, ipsum odio consequat orci, in laoreet felis nulla ut erat. Phasellus venenatis velit ut magna imperdiet hendrerit. Nullam dui turpis, venenatis sit amet eleifend non, pulvinar eu quam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+	<p>Nam ac metus tristique, varius lacus a, lacinia leo. Nam feugiat justo justo, a rhoncus urna dictum nec. Suspendisse tincidunt ornare consectetur. Nam et ligula faucibus, lobortis libero eu, aliquet tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse non dignissim ligula, vulputate placerat augue. Pellentesque a condimentum nisl. Mauris quis ante eget turpis pulvinar ullamcorper nec vitae enim. Fusce tempor velit eu mauris congue, et rhoncus nisl sodales. Praesent quis sem non mauris consequat pretium ut ac massa. Suspendisse scelerisque nisl a turpis scelerisque, id elementum dui interdum. Cras rutrum, justo nec mollis ornare, ipsum velit pretium nunc, a fringilla quam leo id nulla. Maecenas ultrices eget urna in gravida.</p>
+	<div id="box"><div class="contenedor"></div></div>
+	<div id="box"><div class="contenedor"></div></div>
+	<div id="box"><div class="contenedor"></div></div>
+	<div id="box"><div class="contenedor"></div></div>
+	<div id="box"><div class="contenedor"></div></div>
+	<div id="box"><div class="contenedor"></div></div>
+</section>
+<div class="image3">
+
+	<h2><a href="http://www.nosolocss.com/blog/css/como-crear-un-sencillo-efecto-parallax-usando-solo-css">VOLVER ATRAS</a></div></h2>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
