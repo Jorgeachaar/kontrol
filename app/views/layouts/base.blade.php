@@ -122,7 +122,14 @@
     </div><!-- /.container -->
 
     <div class="footer">
-      Este es el footer!!
+        <div class="container text-center">
+
+            <div class="col-lg-4 text-center">BROWSER</div>
+            <div class="col-lg-4 text-center">PROJECT</div>
+            <div class="col-lg-4 text-center">LOGO</div>
+        <hr class="featurette-divider">
+        <p>© 2014 Kontrol Designer</p>
+        </div>
     </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->

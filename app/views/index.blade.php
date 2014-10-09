@@ -136,19 +136,19 @@
 @stop
 
 @section('container')
-<div class="container-fluid">
+<div class="container">
     <ul class="centerlist">
         <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/2.jpg)"><h3>Nueva temporada</h3></div></div></a></li></br>
         <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/3.jpg)"><h3>Comentario 1</h3></div></div></a></li>
         <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/4.jpg)"><h3>Comentario 1</h3></div></div></a></li>
         <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/5.jpg)"><h3>COMENTARIO Q!</h3></div></div></a></li>
         <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/6.jpg)"><h3>KKK</h3></div></div></a></li>
-        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/7.jpg)"><h3>Comentario 1</h3></div></div></a></li>
-        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/8.jpg)"><h3>Comentario 1</h3></div></div></a></li>
-        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/9.jpg)"><h3>Comentario 1</h3></div></div></a></li>
+        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/7.jpg)"><h3>PUBLICIDAD</h3></div></div></a></li>
+        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/8.jpg)"><h3>METAL PARA TODOS</h3></div></div></a></li>
+        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/9.jpg)"><h3>WACHIN!</h3></div></div></a></li>
     </ul>
 </div>
-<hr class="featurette-divider">
+
 
 @stop
 
