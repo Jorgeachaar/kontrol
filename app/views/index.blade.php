@@ -148,6 +148,10 @@
         <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/9.jpg)"><h3>Comentario 1</h3></div></div></a></li>
     </ul>
 </div>
+<hr class="featurette-divider">
+<div class="container-fluid">
+    <p>Este es el footer!!!</p>
+</div>
 
 
 
