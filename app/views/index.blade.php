@@ -149,15 +149,6 @@
     </ul>
 </div>
 <hr class="featurette-divider">
-<div class="container-fluid">
-    <p>Este es el footer!!!</p>
-</div>
-
-
-
-
-
-
 
 @stop
 

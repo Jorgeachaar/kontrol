@@ -56,7 +56,7 @@
     ?>
 
     <div class="navbar navbar-custom navbar-fixed-top" role="navigation">
-      <div class="container">
+      <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -111,7 +111,7 @@
     </div>
 
     @yield('beforeContainer')
-    <div class="container">
+    <div class="container-fluid">
 
       <!-- <div class="starter-template">
         <h1>Bootstrap starter template</h1>
@@ -121,7 +121,9 @@
 
     </div><!-- /.container -->
 
-
+    <div class="footer">
+      Este es el footer!!
+    </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
