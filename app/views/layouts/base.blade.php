@@ -64,7 +64,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href={{URL::route('index')}}><img src="img/Kontrol.png">  Kontrol</a>
+          <a class="navbar-brand" href={{URL::route('index')}}><img src="img/Kontrol.png">   KTRL</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -123,12 +123,11 @@
 
     <div class="footer">
         <div class="container text-center">
-
             <div class="col-lg-4 text-center">BROWSER</div>
             <div class="col-lg-4 text-center">PROJECT</div>
             <div class="col-lg-4 text-center">LOGO</div>
-        <hr class="featurette-divider">
-        <p>© 2014 Kontrol Designer</p>
+            <hr class="featurette-divider">
+            <p>© 2014 Kontrol Designer</p>
         </div>
     </div>
     <!-- Bootstrap core JavaScript

@@ -149,6 +149,25 @@
     </ul>
 </div>
 
+<div class="container-fluid container-about">
+    <div class="container">
+        <div class="col-lg-4"><h3>The Story  KTRL</h3></div>
+        <div class="col-lg-8">
+            <p>
+                Locals Apparel is that lazy hot afternoon when you suddenly feel a cool breeze. Smoky air at some BBQ party. Vague bruises from a awesome ride. Dedicated delicate design. Rather indy than indie. Tanned legs. Daydreams of swaying palms. Working hard and playing harder. A perfect grind. Sun-warmed concrete. Kidney shaped pools. Rebels without causes. Solo but soulful. Venice's winding boardwalks.
+            </p>
+            <p>
+                Home is where the art is. A dream of doing something for the likeminded.
+            </p>
+            <strong>"Working hard and playing harder"</strong>
+            <p>
+                Locals is not only a brand but a lifestyle. It's a little piece of California, from the Swedish west coast, Gothenburg.
+            </p>
+            <strong>Johan Magnusson</strong>
+            <strong>CEO/Founder</strong>
+    </div>
+</div>
+
 
 @stop
 
