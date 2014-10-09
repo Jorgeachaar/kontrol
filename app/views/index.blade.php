@@ -26,6 +26,7 @@
             <li data-target="#myCarousel" data-slide-to="9"></li>
             <li data-target="#myCarousel" data-slide-to="10"></li>
             <li data-target="#myCarousel" data-slide-to="11"></li>
+            <li data-target="#myCarousel" data-slide-to="12"></li>
         </ol>
 
         <!-- Wrapper for Slides -->
@@ -114,6 +115,13 @@
                     <h2>Caption 3</h2>
                 </div>
             </div>
+            <div class="item">
+                <!-- Set the third background image using inline CSS below. -->
+                <div class="fill" style="background-image:url('img/13.jpg');"></div>
+                <div class="carousel-caption">
+                    <h2>Caption 3</h2>
+                </div>
+            </div>
         </div>
 
         <!-- Controls -->
@@ -130,35 +138,18 @@
 @section('container')
 <div class="container-fluid">
 <div class="row row-centered">
-<ul class"text-center list-inlin">
-  <li><div class="col-md-6 square">
-  <div class="pic">Holaadslkjaskdjaksljdklajsdkjalsdlsa jkaldksa ajsklajsdlk allajsdlja jkalj slajslja ljlk jlkja kljkaljsdlkjaskljkjl alj kljklajsdldfhsdjf
-  </div></div></li>
-<li><div class="col-md-6 square">
-  <div class="pic">Holaadslkjaskdjaksljdklajsdkjalsdlsa jkaldksa ajsklajsdlk allajsdlja jkalj slajslja ljlk jlkja kljkaljsdlkjaskljkjl alj kljklajsdldfhsdjf
-  </div></div></li>
-<li><div class="col-md-6 square">
-  <div class="pic">Holaadslkjaskdjaksljdklajsdkjalsdlsa jkaldksa ajsklajsdlk allajsdlja jkalj slajslja ljlk jlkja kljkaljsdlkjaskljkjl alj kljklajsdldfhsdjf
-  </div></div></li>
-<li><div class="col-md-6 square">
-  <div class="pic">Holaadslkjaskdjaksljdklajsdkjalsdlsa jkaldksa ajsklajsdlk allajsdlja jkalj slajslja ljlk jlkja kljkaljsdlkjaskljkjl alj kljklajsdldfhsdjf
-  </div></div></li>
-<li><div class="col-md-6 square">
-  <div class="pic">Holaadslkjaskdjaksljdklajsdkjalsdlsa jkaldksa ajsklajsdlk allajsdlja jkalj slajslja ljlk jlkja kljkaljsdlkjaskljkjl alj kljklajsdldfhsdjf
-  </div></div></li>
-<li><div class="col-md-6 square">
-  <div class="pic">Holaadslkjaskdjaksljdklajsdkjalsdlsa jkaldksa ajsklajsdlk allajsdlja jkalj slajslja ljlk jlkja kljkaljsdlkjaskljkjl alj kljklajsdldfhsdjf
-  </div></div></li>
-<li><div class="col-md-6 square">
-  <div class="pic">Holaadslkjaskdjaksljdklajsdkjalsdlsa jkaldksa ajsklajsdlk allajsdlja jkalj slajslja ljlk jlkja kljkaljsdlkjaskljkjl alj kljklajsdldfhsdjf
-  </div></div></li>
-<li><div class="col-md-6 square">
-  <div class="pic">Holaadslkjaskdjaksljdklajsdkjalsdlsa jkaldksa ajsklajsdlk allajsdlja jkalj slajslja ljlk jlkja kljkaljsdlkjaskljkjl alj kljklajsdldfhsdjf
-  </div></div></li>
-<li><div class="col-md-6 square">
-  <div class="pic">Holaadslkjaskdjaksljdklajsdkjalsdlsa jkaldksa ajsklajsdlk allajsdlja jkalj slajslja ljlk jlkja kljkaljsdlkjaskljkjl alj kljklajsdldfhsdjf
-  </div></div></li>
-</ul>
+
+    <ul class="centerlist">
+        <li><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/2.jpg)"></div></div></li></br>
+        <li><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/3.jpg)"></div></div></li>
+        <li><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/4.jpg)"></div></div></li>
+        <li><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/5.jpg)"></div></div></li>
+        <li><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/6.jpg)"></div></div></li>
+        <li><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/7.jpg)"></div></div></li>
+        <li><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/8.jpg)"></div></div></li>
+        <li><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/9.jpg)"></div></div></li>
+    </ul>
+
 </div>
 </div>
 
