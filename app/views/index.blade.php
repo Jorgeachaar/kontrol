@@ -167,7 +167,7 @@
             <strong>CEO/Founder</strong>
     </div>
 </div>
-
+</div>
 
 @stop
 

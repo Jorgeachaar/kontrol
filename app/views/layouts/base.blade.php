@@ -111,7 +111,7 @@
     </div>
 
     @yield('beforeContainer')
-    <div class="container-fluid">
+    <div class="container-fluid caca">
 
       <!-- <div class="starter-template">
         <h1>Bootstrap starter template</h1>
