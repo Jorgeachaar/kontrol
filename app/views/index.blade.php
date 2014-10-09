@@ -137,20 +137,16 @@
 
 @section('container')
 <div class="container-fluid">
-<div class="row row-centered">
-
     <ul class="centerlist">
-        <li><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/2.jpg)"></div></div></li></br>
-        <li><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/3.jpg)"></div></div></li>
-        <li><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/4.jpg)"></div></div></li>
-        <li><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/5.jpg)"></div></div></li>
-        <li><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/6.jpg)"></div></div></li>
-        <li><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/7.jpg)"></div></div></li>
-        <li><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/8.jpg)"></div></div></li>
-        <li><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/9.jpg)"></div></div></li>
+        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/2.jpg)"><h3>Nueva temporada</h3></div></div></a></li></br>
+        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/3.jpg)"><h3>Comentario 1</h3></div></div></a></li>
+        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/4.jpg)"><h3>Comentario 1</h3></div></div></a></li>
+        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/5.jpg)"><h3>COMENTARIO Q!</h3></div></div></a></li>
+        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/6.jpg)"><h3>KKK</h3></div></div></a></li>
+        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/7.jpg)"><h3>Comentario 1</h3></div></div></a></li>
+        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/8.jpg)"><h3>Comentario 1</h3></div></div></a></li>
+        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/9.jpg)"><h3>Comentario 1</h3></div></div></a></li>
     </ul>
-
-</div>
 </div>
 
 

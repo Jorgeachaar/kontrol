@@ -1,1 +1,2 @@
-*Ver si manda email
+*No se ve el menu cuando esta en modomobil
++Efecto en el rombo cuando aparece las letreas no sea tan brusco

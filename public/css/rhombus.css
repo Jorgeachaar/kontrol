@@ -209,9 +209,21 @@ footer {
   z-index: 100;
 }
 
+.boxcontenedor:hover h3
+{
+  display: block;
+}
+
 #box:hover
 {
   z-index: 100;
+}
+
+.boxcontenedor h3
+{
+  line-height: 422px;
+  text-align: center;
+  display: none;
 }
 
 .centerlist {
