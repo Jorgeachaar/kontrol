@@ -11,7 +11,6 @@
 @section('container')
 
 <h1>Login</h1>
-
 {{Form::open(array(
             "method" => "POST",
             "action" => "HomeController@login",
@@ -40,6 +39,7 @@
 
 {{Form::close()}}
 
+<a href="{{URL::route('register')}}">Registrarme</a><br>
 <a href="{{ URL::route('recoverpassword')}}">Recuperar password</a>
 
 @stop

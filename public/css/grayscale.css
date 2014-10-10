@@ -65,7 +65,7 @@ a:focus {
 
 @media(min-width:767px) {
     .navbar {
-        padding: 20px 15px;
+        padding: 20px 35px;
         border-bottom: 0;
         letter-spacing: 1px;
         background: 0 0;
@@ -75,7 +75,7 @@ a:focus {
     }
 
     .top-nav-collapse {
-        padding: 0 15px;
+        padding: 0 35px;
         background-color: #000;
     }
 

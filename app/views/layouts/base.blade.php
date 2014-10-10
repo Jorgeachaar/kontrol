@@ -68,18 +68,15 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class=""><a href={{URL::route('index')}}>MEN</a></li>
-            <li class=""><a href={{URL::route('index')}}>WOMAN</a></li>
+            <li class=""><a href={{URL::route('index')}}>SHOP</a></li>
+            <li class=""><a href={{URL::route('index')}}>STORY</a></li>
             <li class=""><a href={{URL::route('index')}}>BLOG</a></li>
-            <li class=""><a href={{URL::route('index')}}>ABOUT</a></li>
             <li class="{{ $current['contact'] }}"><a href={{URL::route('contact')}}>Contact</a></li>
           </ul>
                <ul class="nav navbar-nav navbar-right">
                       <?php if(Auth::user()->guest()){ ?>
-                        <li class="{{ $current['login'] }}"><a href={{URL::route('login')}}>Iniciar sesion</a></li>
-                        <li class="{{ $current['register'] }}"><a href={{URL::route('register')}}>Registrarme</a></li>
+                        <li class="{{ $current['login'] }}"><a href={{URL::route('login')}}><span class="glyphicon glyphicon-user"></span></a></li>
                         <?php } else { ?>
-
 
                         <li class="dropdown">
                             <a href="" class="dropdown-toggle" data-toggle="dropdown">
@@ -104,14 +101,15 @@
 
 
                         <?php } ?>
-                        <li><a href="#" title="items"><span class ="glyphicon glyphicon-shopping-cart"></span>Cart (0)</a></li>
+                        <li><a href="#" class="btn-dangerNO" title="items"><span class ="glyphicon glyphicon-shopping-cart"></span>
+                        <span class="badge badge-cart">4</span></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
     @yield('beforeContainer')
-    <div class="container-fluid caca">
+    <div class="container-fluid">
 
       <!-- <div class="starter-template">
         <h1>Bootstrap starter template</h1>
@@ -122,6 +120,9 @@
     </div><!-- /.container -->
 
     <div class="footer">
+        <div class="row text-center">
+         <a href="/"><img class="glyph" width="40" src="img/Kontrol.png"></a>
+         </div>
         <div class="container text-center">
             <div class="col-lg-4 text-center">BROWSER</div>
             <div class="col-lg-4 text-center">PROJECT</div>

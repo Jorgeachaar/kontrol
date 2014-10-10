@@ -235,5 +235,15 @@ body {
   padding: 100px;
 }
 
+.badge-cart
+{
+  /*vertical-align: top;
+  padding: 1px 5px 1px;
+  position: absolute;
+  top:8px;
+  right: 25px;*/
+  background: #C3232F
+}
+
 
 
