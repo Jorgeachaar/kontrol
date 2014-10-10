@@ -2,6 +2,10 @@
 
 @section('head')
     <title>Kontrol</title>
+    <meta name='title' content='Kontrol'>
+    <meta name='description' content='Kontrol'>
+    <meta name='keywords' content='palabras, clave'>
+    <meta name='robots' content='noindex,nofollow'>
 
     <link href="css/grayscale.css" rel="stylesheet">
 
