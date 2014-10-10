@@ -12,9 +12,12 @@ body {
     background-color: #FFF;
 
 }
+
 .footer {
-  bottom: 0;
+  bottom: 1;
   width: 100%;
+  background-color: #000;
+  position: absolute;
 }
 
 .navbar-inverse {
@@ -129,8 +132,6 @@ a.active {
   letter-spacing: -1px;
 }
 
-
-
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
@@ -236,20 +237,14 @@ a.active {
     text-align:center;
     padding: 45px 0px 0px 0px;
 }
+
 .centerlist li {
     display: inline-block;
 }
 
-.footer
+.container-page
 {
-  /*margin-top: 30px;
-  padding: 20px 0;*/
-  background-color: #000;
-}
-
-.container-fluid
-{
-  padding:0;
+  padding-bottom: 15px;
 }
 
 .container-about

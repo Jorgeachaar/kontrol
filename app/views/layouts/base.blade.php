@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -114,7 +114,7 @@
     </div>
 
     @yield('beforeContainer')
-    <div class="container-fluid">
+    <div class="container-fluid container-page">
 
       <!-- <div class="starter-template">
         <h1>Bootstrap starter template</h1>

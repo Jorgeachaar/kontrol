@@ -10,7 +10,25 @@
 
 @section('container')
 
-<h1>Shop</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-lg-6">
+			Imagen
+			<img src="img/shop/1.png" class="img-responsive" alt="T-Shir">
+		</div>
+		<div class="col-lg-6">
+			<div class="row">
+				<h3>Nombre del producto</h3>
+				<p>$45</p>
+				<p>Detalle del produto o algun tipo de informaciòn adicional.</p>
+			</div>
+			<div class="row">
+				<h3>Size</h3>
+			</div>
+			<a class="btn btn-default" href="#" role="button">add to cart</a>
+		</div>
+	</div>
+</div>
 
 @stop
 

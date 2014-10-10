@@ -61,4 +61,9 @@ a:focus {
     }
 }
 
+.container-fluid
+{
+  padding:0;
+}
+
 
