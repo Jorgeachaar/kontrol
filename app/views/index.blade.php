@@ -173,5 +173,7 @@
 
 @section('script')
 
+<script src="js/grayscale.js"></script>
+
 @stop
 

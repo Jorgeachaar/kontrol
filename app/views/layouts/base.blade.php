@@ -39,6 +39,7 @@
                     'contact' => '',
                     'login' => '',
                     'register' => '',
+                    'shop' => '',
                 );
 
             if ($vista == 'index' || $vista == '') {
@@ -52,10 +53,14 @@
             }else if ($vista == 'register')
             {
                 $current['register'] = 'active';
+            }else if ($vista == 'shop')
+            {
+                $current['shop'] = 'active';
             };
     ?>
 
-    <div class="navbar navbar-custom navbar-fixed-top" role="navigation">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -68,10 +73,10 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class=""><a href={{URL::route('index')}}>SHOP</a></li>
+            <li class="{{ $current['shop']}}"><a href={{URL::route('shop')}}>SHOP</a></li>
             <li class=""><a href={{URL::route('index')}}>STORY</a></li>
             <li class=""><a href={{URL::route('index')}}>BLOG</a></li>
-            <li class="{{ $current['contact'] }}"><a href={{URL::route('contact')}}>Contact</a></li>
+            <li class="{{ $current['contact']}}"><a href={{URL::route('contact')}}>Contact</a></li>
           </ul>
                <ul class="nav navbar-nav navbar-right">
                       <?php if(Auth::user()->guest()){ ?>
@@ -137,7 +142,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
-    <script src="js/grayscale.js"></script>
+    
     @yield('script')
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!--<script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>-->

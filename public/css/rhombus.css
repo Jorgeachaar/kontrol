@@ -6,11 +6,32 @@
 
 html,
 body {
+    position: relative;
     height: 100%;
-    /*background-color: #2d2d30;*/
+    min-height: 100%;
     background-color: #FFF;
+
+}
+.footer {
+  bottom: 0;
+  width: 100%;
 }
 
+.navbar-inverse {
+        padding: 0 35px;
+        background-color: #000;
+        border-bottom: 1px solid rgba(255,255,255,.3);
+    }
+
+
+.navbar-inverse .navbar-brand
+{
+  color: #fff;
+}
+.navbar-inverse .navbar-nav>li>a 
+{
+  color: #fff;
+}
 .navbar-brand {
   padding: 12px 15px;
 }
@@ -25,7 +46,7 @@ body {
     height: 100%;
 }
 
-.navbar-custom {
+.navbar-inverse {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
@@ -33,43 +54,51 @@ body {
     background-color: #000;
 }
 
-.navbar-custom .navbar-brand {
+.navbar-inverse .navbar-brand {
     /*font-weight: 700;*/
 }
 
-.navbar-custom .navbar-brand:focus {
+.navbar-inverse .navbar-brand:focus {
     outline: 0;
 }
 
-.navbar-custom .navbar-brand .navbar-toggle {
+.navbar-inverse .navbar-brand .navbar-toggle {
     padding: 4px 6px;
     font-size: 16px;
     color: #fff;
 }
 
-.navbar-custom .navbar-brand .navbar-toggle:focus,
-.navbar-custom .navbar-brand .navbar-toggle:active {
+.navbar-inverse .navbar-brand .navbar-toggle:focus,
+.navbar-inverse .navbar-brand .navbar-toggle:active {
     outline: 0;
 }
 
-.navbar-custom a {
+.navbar-inverse a {
     color: #fff;
 }
 
-.navbar-custom .nav li.active {
+.navbar-inverse .nav li.active {
     outline: nonte;
     background-color: rgba(255,255,255,.3);
 }
 
-.navbar-custom .nav li a {
+.navbar-inverse .nav li a {
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
 }
 
-.navbar-custom .nav li a:hover,
-.navbar-custom .nav li a:focus,
-.navbar-custom .nav li a.active {
+.navbar-inverse .navbar-nav>.active>a, 
+.navbar-inverse .navbar-nav>.active>a:hover, 
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .nav li a:hover,
+.navbar-inverse .nav li a:focus,
+.navbar-inverse .nav li a.active {
+    outline: 0;
+    background-color: rgba(255,255,255,.3);
+}
+
+a.active {
     outline: 0;
     background-color: rgba(255,255,255,.3);
 }
@@ -232,7 +261,7 @@ body {
 
 .container-about .container
 {
-  padding: 100px;
+  padding: 100px 0px;
 }
 
 .badge-cart

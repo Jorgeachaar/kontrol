@@ -142,6 +142,11 @@ class HomeController extends BaseController {
     {
     }
 
+    public function shop()
+    {
+    	return View::make('shop');
+    }
+
 
 
 }

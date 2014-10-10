@@ -208,3 +208,9 @@ App::missing(function($exception)
 {
     return Response::view('Error.error404', array(), 404);
 });
+
+
+
+/*NUEVOS*/
+
+Route::get('/shop', array('as' => 'shop', 'uses' =>'HomeController@shop'));
