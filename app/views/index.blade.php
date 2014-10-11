@@ -7,8 +7,7 @@
     <meta name='keywords' content='palabras, clave'>
     <meta name='robots' content='noindex,nofollow'>
 
-    <link href="css/grayscale.css" rel="stylesheet">
-
+    {{ HTML::style('css/grayscale.css') }}
 @stop
 
 @section('beforeContainer')
@@ -36,13 +35,13 @@
         <!-- Wrapper for Slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <div class="fill" style="background-image:url('img/1.jpg');"></div>
+                <div class="fill" style="background-image:url('img/2.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 1</h2>
                 </div>
             </div>
             <div class="item">
-                <div class="fill" style="background-image:url('img/2.jpg');"></div>
+                <div class="fill" style="background-image:url('img/1.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 2</h2>
                 </div>
@@ -129,15 +128,15 @@
 @section('container')
 <div class="container">
     <ul class="centerlist">
-        <li><a href="{{URL::route('shop')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/3.jpg)"><h3>Comentario 1</h3></div></div></a></li>
+        <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/3.jpg)"><h3>Comentario 1</h3></div></div></a></li>
         <br>
-        <li><a href="{{URL::route('shop')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/2.jpg)"><h3>Nueva temporada</h3></div></div></a></li>
-        <li><a href="{{URL::route('shop')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/4.jpg)"><h3>Comentario 1</h3></div></div></a></li>
-        <li><a href="{{URL::route('shop')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/5.jpg)"><h3>COMENTARIO Q!</h3></div></div></a></li>
-        <li><a href="{{URL::route('shop')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/6.jpg)"><h3>KKK</h3></div></div></a></li>
-        <li><a href="{{URL::route('shop')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/7.jpg)"><h3>PUBLICIDAD</h3></div></div></a></li>
-        <li><a href="{{URL::route('shop')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/8.jpg)"><h3>METAL PARA TODOS</h3></div></div></a></li>
-        <li><a href="{{URL::route('shop')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/9.jpg)"><h3>WACHIN!</h3></div></div></a></li>
+        <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/2.jpg)"><h3>Nueva temporada</h3></div></div></a></li>
+        <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/4.jpg)"><h3>Comentario 1</h3></div></div></a></li>
+        <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/5.jpg)"><h3>COMENTARIO Q!</h3></div></div></a></li>
+        <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/6.jpg)"><h3>KKK</h3></div></div></a></li>
+        <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/7.jpg)"><h3>PUBLICIDAD</h3></div></div></a></li>
+        <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/8.jpg)"><h3>METAL PARA TODOS</h3></div></div></a></li>
+        <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/9.jpg)"><h3>WACHIN!</h3></div></div></a></li>
     </ul>
 </div>
 
@@ -167,7 +166,7 @@
 
 <script src="js/grayscale.js"></script>
 <script type="text/javascript">
-    $('.carousel').carousel();
+    // $('.carousel').carousel();
 </script>
 
 @stop

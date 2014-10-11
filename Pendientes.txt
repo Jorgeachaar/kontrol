@@ -4,7 +4,10 @@
 +Efecto en el rombo cuando aparece las letreas no sea tan brusco
 +Buscar
 +Redes sociales como en el footer y en el header
-
++affix para el menu (http://stackoverflow.com/questions/12070970/how-to-use-the-new-affix-plugin-in-twitters-bootstrap-2-1-0)
++Manejo de errores(http://desdesarrollodesoftware.blogspot.com.ar/2010/02/net-mvc-jquery-manejo-de-excepciones.html
+					http://www.jqueryeasy.com/2011/12/26/uso-de-excepciones-y-manejando-un-log-de-errores/
+					)
 
 
 PAGE

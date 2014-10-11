@@ -12,12 +12,12 @@
     <!-- <title>Starter Template for Bootstrap</title> -->
 
     <!-- Bootstrap core CSS -->
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+    {{ HTML::style('bootstrap/css/bootstrap.min.css') }}
+    
     <!-- Custom styles for this template -->
-    <link href="css/starter-template.css" rel="stylesheet">
-    <link href="css/rhombus.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    {{ HTML::style('css/starter-template.css') }}
+    {{ HTML::style('css/rhombus.css') }}
+    {{ HTML::style('css/font-awesome.min.css') }}
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -31,7 +31,7 @@
     @yield('head')
   </head>
 
-  <body>
+  <body id="home">
     <?php
             $vista = Route::currentRouteName();
             $current = array(
@@ -127,7 +127,7 @@
     <div class="footer">
         <div class="container text-center">
           <div class="row text-center">
-            <a href="/"><img class="glyph" width="40" src="img/Kontrol.png"></a>
+            <a href="#home"><img class="glyph" width="40" src="img/Kontrol.png"></a>
           </div>
           <div class="col-lg-4 text-center">PROJECT</div>
           <div class="col-lg-4 text-center">LOGO</div>
@@ -146,9 +146,10 @@
     <!-- EFECTO DE SCROLL -->
     <script type="text/javascript">
     $(document).ready(function(){
+
       $('a[href*=#]').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-        && location.hostname == this.hostname) {
+        && location.hostname == this.hostname && this.hash != "#myCarousel") {
           var $target = $(this.hash);
           $target = $target.length && $target
           || $('[name=' + this.hash.slice(1) +']');
