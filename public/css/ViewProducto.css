@@ -1,11 +1,21 @@
-label.btn:hover
+hr 
 {
-	background-color: #eee;
+	border-top: 1px black solid;
+}
+label.btn
+{
+	border-radius: 0;
 }
 
 .btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle)
 {
 	border-top-right-radius: 0;
+}
+
+label.btn:hover
+{
+	background-color: #000;
+	color: #fff;
 }
 
 .btn:active, .btn.active
@@ -16,4 +26,15 @@ label.btn:hover
           box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0);
 	background-color: #000;
 	color: #fff;
+}
+
+.producttitle#C3232F
+{
+	text-transform: uppercase;
+}
+
+.producttitle .oldprice
+{	color: #C3232F;
+	text-decoration:line-through;
+	margin-left: 15px;
 }

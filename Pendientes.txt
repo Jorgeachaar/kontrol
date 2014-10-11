@@ -1,4 +1,6 @@
-*No se ve el menu cuando esta en modomobil
++efecto parallax
+*El menu principal del index es diferente a las otras pages 
++Lupa al articulo de la imagen
 +Efecto en el rombo cuando aparece las letreas no sea tan brusco
 +Buscar
 +Redes sociales como en el footer y en el header
@@ -11,8 +13,14 @@ http://lovebootstrap.com/bootstrap-themes/free
 http://bootstrapbay.com/
 https://bootstrapmade.com/themes/category/html-template/business-corporate/
 http://www.prepbootstrap.com/
+http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-breadcrumbs.php
 
-
+http://bashooka.com/inspiration/shopping-cart-page-designs-inspiration/
+http://www.vandelaydesign.com/best-ecommerce-website-designs/
+http://www.shopify.com/blog/11863377-30-beautiful-and-creative-ecommerce-website-designs
+http://www.dropdead.co/
+http://rebel8.com/
+http://articlemenswear.com/products/alaskan-guide-shirt-by-filson
 http://www.bootply.com/render/130150#
 http://www.nixon.com/ot/en/
 https://www.dstldjeans.com/shop/womens

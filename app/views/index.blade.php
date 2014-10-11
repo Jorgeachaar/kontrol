@@ -36,91 +36,78 @@
         <!-- Wrapper for Slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <!-- Set the first background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/1.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 1</h2>
                 </div>
             </div>
             <div class="item">
-                <!-- Set the second background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/2.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 2</h2>
                 </div>
             </div>
             <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/3.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 3</h2>
                 </div>
             </div>
             <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/4.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 3</h2>
                 </div>
             </div>
             <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/5.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 3</h2>
                 </div>
             </div>
             <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/6.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 3</h2>
                 </div>
             </div>
             <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/7.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 3</h2>
                 </div>
             </div>
             <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/8.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 3</h2>
                 </div>
             </div>
             <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/9.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 3</h2>
                 </div>
             </div>
             <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/10.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 3</h2>
                 </div>
             </div>
             <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/11.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 3</h2>
                 </div>
             </div>
             <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/12.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 3</h2>
                 </div>
             </div>
             <div class="item">
-                <!-- Set the third background image using inline CSS below. -->
                 <div class="fill" style="background-image:url('img/13.jpg');"></div>
                 <div class="carousel-caption">
                     <h2>Caption 3</h2>
@@ -142,18 +129,19 @@
 @section('container')
 <div class="container">
     <ul class="centerlist">
-        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/2.jpg)"><h3>Nueva temporada</h3></div></div></a></li></br>
-        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/3.jpg)"><h3>Comentario 1</h3></div></div></a></li>
-        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/4.jpg)"><h3>Comentario 1</h3></div></div></a></li>
-        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/5.jpg)"><h3>COMENTARIO Q!</h3></div></div></a></li>
-        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/6.jpg)"><h3>KKK</h3></div></div></a></li>
-        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/7.jpg)"><h3>PUBLICIDAD</h3></div></div></a></li>
-        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/8.jpg)"><h3>METAL PARA TODOS</h3></div></div></a></li>
-        <li><a href=""><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/9.jpg)"><h3>WACHIN!</h3></div></div></a></li>
+        <li><a href="{{URL::route('shop')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/3.jpg)"><h3>Comentario 1</h3></div></div></a></li>
+        <br>
+        <li><a href="{{URL::route('shop')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/2.jpg)"><h3>Nueva temporada</h3></div></div></a></li>
+        <li><a href="{{URL::route('shop')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/4.jpg)"><h3>Comentario 1</h3></div></div></a></li>
+        <li><a href="{{URL::route('shop')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/5.jpg)"><h3>COMENTARIO Q!</h3></div></div></a></li>
+        <li><a href="{{URL::route('shop')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/6.jpg)"><h3>KKK</h3></div></div></a></li>
+        <li><a href="{{URL::route('shop')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/7.jpg)"><h3>PUBLICIDAD</h3></div></div></a></li>
+        <li><a href="{{URL::route('shop')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/8.jpg)"><h3>METAL PARA TODOS</h3></div></div></a></li>
+        <li><a href="{{URL::route('shop')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/9.jpg)"><h3>WACHIN!</h3></div></div></a></li>
     </ul>
 </div>
 
-<div class="container-fluid container-about">
+<div id="story" class="container-fluid container-about">
     <div class="container">
         <div class="col-lg-4"><h3>The Story  KTRL</h3></div>
         <div class="col-lg-8">
@@ -178,6 +166,9 @@
 @section('script')
 
 <script src="js/grayscale.js"></script>
+<script type="text/javascript">
+    $('.carousel').carousel();
+</script>
 
 @stop
 

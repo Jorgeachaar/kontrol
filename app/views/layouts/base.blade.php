@@ -74,7 +74,7 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="{{ $current['shop']}}"><a href={{URL::route('shop')}}>SHOP</a></li>
-            <li class=""><a href={{URL::route('index')}}>STORY</a></li>
+            <li class=""><a href="/#story">STORY</a></li>
             <li class=""><a href={{URL::route('index')}}>BLOG</a></li>
             <li class="{{ $current['contact']}}"><a href={{URL::route('contact')}}>Contact</a></li>
           </ul>
@@ -125,15 +125,15 @@
     </div><!-- /.container -->
 
     <div class="footer">
-        <div class="row text-center">
-         <a href="/"><img class="glyph" width="40" src="img/Kontrol.png"></a>
-         </div>
         <div class="container text-center">
-            <div class="col-lg-4 text-center">BROWSER</div>
-            <div class="col-lg-4 text-center">PROJECT</div>
-            <div class="col-lg-4 text-center">LOGO</div>
-            <hr class="featurette-divider">
-            <p>© 2014 Kontrol Designer</p>
+          <div class="row text-center">
+            <a href="/"><img class="glyph" width="40" src="img/Kontrol.png"></a>
+          </div>
+          <div class="col-lg-4 text-center">PROJECT</div>
+          <div class="col-lg-4 text-center">LOGO</div>
+          <div class="col-lg-4 text-center">BROWSER</div>
+          <hr class="featurette-divider">
+          <p>© 2014 Kontrol Designer</p>
         </div>
     </div>
     <!-- Bootstrap core JavaScript
@@ -142,7 +142,26 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script src="js/jquery.easing.min.js"></script>
-    
+
+    <!-- EFECTO DE SCROLL -->
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('a[href*=#]').click(function() {
+        if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+        && location.hostname == this.hostname) {
+          var $target = $(this.hash);
+          $target = $target.length && $target
+          || $('[name=' + this.hash.slice(1) +']');
+          if ($target.length) {
+            var targetOffset = $target.offset().top;
+            $('html,body')
+            .stop().animate({scrollTop: targetOffset}, 1000, 'easeOutQuart');
+           return false;
+          }
+        }
+      });
+    });
+    </script>
     @yield('script')
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!--<script src="bootstrap/js/ie10-viewport-bug-workaround.js"></script>-->
