@@ -268,5 +268,9 @@ a.active {
   background: #C3232F
 }
 
+hr.black
+{
+  border-top: 1px black solid;
+}
 
 

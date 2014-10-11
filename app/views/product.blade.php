@@ -123,12 +123,12 @@
 		<div class="col-lg-6 text-left">
 			<div class="producttitle">
 				<h1>Product name</h1>
-				<hr>
+				<hr class="black">
 					<h3>  
 					$45.00
 					<span class="oldprice">$88.00</span>
 					</h3>
-				<hr>
+				<hr class="black">
 				<p>Detalle del produto o algun tipo de informaciòn adicional.</p>
 			</div>			
 					
@@ -154,7 +154,7 @@
 				</label>
 			</div><br><br>
      		<a class="btn btn-default" href="#" role="button">add to cart</a>
-     		<hr>
+     		<hr class="black">
 
      		<p>
      			This stone knitted crewneck sweater has an applied patch design on the front and on the left sleeve.
