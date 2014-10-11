@@ -137,21 +137,41 @@
 
 			<label>SIZE <a href=""  data-toggle="modal" data-target="#sizeModal">(WHAT SIZE AM I?)</a></label><br>
 			<div class="btn-group" data-toggle="buttons">
-				<label class="btn btn-tool" data-toggle="tooltip" data-placement="left" title="S SMALL">
-					<input type="radio" name="options" id="option1" checked> XS
-				</label>
-				<label class="btn btn-tool" data-toggle="tooltip" data-placement="top" title="SMALL">
-				 	<input type="radio" name="options" id="option2"> S
-				</label>
-				<label class="btn btn-tool" data-toggle="tooltip" data-placement="top" title="MEDIUN">
-				  	<input type="radio" name="options" id="option3"> M
-				</label>
-				<label class="btn btn-tool" data-toggle="tooltip" data-placement="top" title="LARGE">
-				  	<input type="radio" name="options" id="option4"> L
-				</label>
-				<label class="btn btn-tool" data-toggle="tooltip" data-placement="right" title="S LARGE">
-				  	<input type="radio" name="options" id="option5"> XL
-				</label>
+				<div id="box">
+					<div class="boxcontenedor">
+						<label class="btn btn-tool" data-toggle="tooltip" data-placement="left" title="S SMALL">
+							<input type="radio" name="options" id="option1" checked> XS
+						</label>
+					</div>
+				</div>
+				<div id="box">
+					<div class="boxcontenedor">	
+						<label class="btn btn-tool" data-toggle="tooltip" data-placement="top" title="SMALL">
+						 	<input type="radio" name="options" id="option2"> S
+						</label>
+					</div>
+				</div>
+				<div id="box">
+					<div class="boxcontenedor">	
+						<label class="btn btn-tool" data-toggle="tooltip" data-placement="top" title="MEDIUN">
+						  	<input type="radio" name="options" id="option3"> M
+						</label>
+					</div>
+				</div>
+				<div id="box">
+					<div class="boxcontenedor">	
+						<label class="btn btn-tool" data-toggle="tooltip" data-placement="top" title="LARGE">
+						  	<input type="radio" name="options" id="option4"> L
+						</label>
+					</div>
+				</div>
+				<div id="box">
+					<div class="boxcontenedor">	
+						<label class="btn btn-tool" data-toggle="tooltip" data-placement="right" title="S LARGE">
+						  	<input type="radio" name="options" id="option5"> XL
+						</label>
+					</div>
+				</div>	
 			</div><br><br>
      		<a class="btn btn-default" href="#" role="button">add to cart</a>
      		<hr class="black">

@@ -230,6 +230,7 @@ a.active {
   line-height: 422px;
   text-align: center;
   display: none;
+  color: #000;
 }
 
 .centerlist {
