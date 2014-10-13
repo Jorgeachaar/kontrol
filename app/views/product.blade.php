@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('head')
-<title>Shop</title>
+<title>Product - KTRL</title>
 	<meta name='title' content='Shop'>
 	<meta name='description' content='Shop'>
 	<meta name='keywords' content='palabras, clave'>

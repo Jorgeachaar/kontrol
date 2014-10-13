@@ -115,6 +115,7 @@ a.active {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+    background-attachment: fixed
 }
 
 /* Featurettes
@@ -208,6 +209,18 @@ a.active {
   filter:alpha(opacity=50);
 }
 
+@media (max-width: 767px){
+  #box{
+    width: 250px;
+    height: 250px;
+  }
+
+  .boxcontenedor{
+    width: 372px;
+    height: 372px;
+  }
+}
+
 .boxcontenedor:hover
 {
   filter:alpha(opacity=100);
@@ -252,6 +265,9 @@ a.active {
   background-color: #000;
   padding: 0px;
   margin-top: 30px;
+  /*font-family: 'Raleway', sans-serif;*/
+  font-family: 'Khand', sans-serif;
+  /*font-size: 48px;*/
 }
 
 .container-about .container
@@ -261,11 +277,6 @@ a.active {
 
 .badge-cart
 {
-  /*vertical-align: top;
-  padding: 1px 5px 1px;
-  position: absolute;
-  top:8px;
-  right: 25px;*/
   background: #C3232F
 }
 

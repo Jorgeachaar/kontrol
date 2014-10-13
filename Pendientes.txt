@@ -1,10 +1,10 @@
 +efecto parallax
 *El menu principal del index es diferente a las otras pages 
-+Lupa al articulo de la imagen
++Lupa al articulo de la imagen para ver mejor la imagen
 +Efecto en el rombo cuando aparece las letreas no sea tan brusco
 +Buscar
 *ver el tema de las imagenes:URL Product/{parametro}
-+Redes sociales como en el footer y en el header
++Redes sociales como en el footer y en el header (Fuente:https://icomoon.io/app/#/select/font)
 +affix para el menu (http://stackoverflow.com/questions/12070970/how-to-use-the-new-affix-plugin-in-twitters-bootstrap-2-1-0)
 +Manejo de errores(http://desdesarrollodesoftware.blogspot.com.ar/2010/02/net-mvc-jquery-manejo-de-excepciones.html
 					http://www.jqueryeasy.com/2011/12/26/uso-de-excepciones-y-manejando-un-log-de-errores/
@@ -12,6 +12,8 @@
 
 
 PAGE
+
+https://developer.mozilla.org/es/docs/CSS/Media_queries (css mediaquery)
 
 http://lovebootstrap.com/bootstrap-themes/free
 http://bootstrapbay.com/

@@ -9,6 +9,9 @@
     <meta name="author" content="">
     <link rel="icon" href="img/KontrolBlack.png">
 
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Khand' rel='stylesheet' type='text/css'>
+
     <!-- <title>Starter Template for Bootstrap</title> -->
 
     <!-- Bootstrap core CSS -->

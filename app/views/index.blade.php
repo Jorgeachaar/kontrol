@@ -1,7 +1,7 @@
 @extends('layouts.base')
 
 @section('head')
-    <title>Kontrol</title>
+    <title>Kontrol - KTRL</title>
     <meta name='title' content='Kontrol'>
     <meta name='description' content='Kontrol'>
     <meta name='keywords' content='palabras, clave'>
@@ -127,7 +127,7 @@
 
 @section('container')
 <div class="container">
-    <ul class="centerlist">
+    <ul class="centerlist grid effect-4" id="grid">
         <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/3.jpg)"><h3>Comentario 1</h3></div></div></a></li>
         <br>
         <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/2.jpg)"><h3>Nueva temporada</h3></div></div></a></li>
@@ -165,9 +165,6 @@
 @section('script')
 
 <script src="js/grayscale.js"></script>
-<script type="text/javascript">
-    // $('.carousel').carousel();
-</script>
 
 @stop
 
