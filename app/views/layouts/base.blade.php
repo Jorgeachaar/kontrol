@@ -82,6 +82,7 @@
             <li class="{{ $current['contact']}}"><a href={{URL::route('contact')}}>Contact</a></li>
           </ul>
                <ul class="nav navbar-nav navbar-right">
+                      <li><a href="#"><span class="fa fa-facebook-square fa-4"></span></a></li>
                       <?php if(Auth::user()->guest()){ ?>
                         <li class="{{ $current['login'] }}"><a href={{URL::route('login')}}><span class="glyphicon glyphicon-user"></span></a></li>
                         <?php } else { ?>

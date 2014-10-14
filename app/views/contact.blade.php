@@ -45,7 +45,7 @@
 @stop
 
 @section('container')
-	<div class="container">
+	<div class="container" id="ContactCotainer">
 		<h1>Contact</h1>
 		<hr class="black">
 		<div id="mensaje" class="bg-info">{{ $mensaje }}</div>
