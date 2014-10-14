@@ -83,7 +83,7 @@
 		{{ Form::captcha() }}
 
 		<!--{{ Form::input('submit', null, 'Enviar', array('class' => 'btn-primary')) }}-->
-		{{ Form::input('button', null, 'Enviar', array('class' => 'btn-primary', 'id' => 'btn')) }}
+		{{ Form::input('button', null, 'Enviar', array('class' => 'btn btn-default', 'id' => 'btn')) }}
 
 		{{Form::close()}}
 	</div>

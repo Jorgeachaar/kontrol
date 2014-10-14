@@ -6,41 +6,47 @@
 <meta name='description' content='Login'>
 <meta name='keywords' content='palabras, clave'>
 <meta name='robots' content='noindex,nofollow'>
+
+{{ HTML::style('css/contact.css') }}
 @stop
 
 @section('container')
+<div class="container" id="ContactCotainer">
 
-<h1>Login</h1>
-{{Form::open(array(
-            "method" => "POST",
-            "action" => "HomeController@login",
-            "role" => "form",
-            ))}}
+    <h1>Login</h1>
+    <hr class="black">
+    {{Form::open(array(
+                "method" => "POST",
+                "action" => "HomeController@login",
+                "role" => "form",
+                ))}}
 
-            <div class="form-group">
-                {{Form::label("Email:")}}
-                {{Form::input("text", "email", null, array("class" => "form-control"))}}
-            </div>
+                <div class="form-group">
+                    {{Form::label("Email:")}}
+                    {{Form::input("text", "email", null, array("class" => "form-control2"))}}
+                </div>
 
-            <div class="form-group">
-                {{Form::label("Password:")}}
-                {{Form::input("password", "password", null, array("class" => "form-control"))}}
-            </div>
+                <div class="form-group">
+                    {{Form::label("Password:")}}
+                    {{Form::input("password", "password", null, array("class" => "form-control2"))}}
+                </div>
 
-            <div class="form-group">
-                {{Form::label("Recordar sesión:")}}
-                {{Form::input("checkbox", "remember", "On")}}
-            </div>
+                <div class="form-group">
+                    {{Form::label("Recordar sesión:")}}
+                    {{Form::input("checkbox", "remember", "On")}}
+                </div>
 
-            <div class="form-group">
-                {{Form::input("hidden", "_token", csrf_token())}}
-                {{Form::input("submit", null, "Iniciar sesión", array("class" => "btn btn-primary"))}}
-            </div>
+                <div class="form-group">
+                    {{Form::input("hidden", "_token", csrf_token())}}
+                    {{Form::input("submit", null, "Iniciar sesión", array("class" => "btn btn-default"))}}
+                </div>
 
-{{Form::close()}}
+    {{Form::close()}}
 
-<a href="{{URL::route('register')}}">Registrarme</a><br>
-<a href="{{ URL::route('recoverpassword')}}">Recuperar password</a>
+    <a href="{{URL::route('register')}}">Registrarme</a><br>
+    <a href="{{ URL::route('recoverpassword')}}">Recuperar password</a>
+
+</div>
 
 @stop
 

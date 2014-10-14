@@ -16,7 +16,7 @@
 
     <!-- Bootstrap core CSS -->
     {{ HTML::style('bootstrap/css/bootstrap.min.css') }}
-    
+
     <!-- Custom styles for this template -->
     {{ HTML::style('css/starter-template.css') }}
     {{ HTML::style('css/rhombus.css') }}
@@ -78,11 +78,12 @@
           <ul class="nav navbar-nav">
             <li class="{{ $current['shop']}}"><a href={{URL::route('shop')}}>SHOP</a></li>
             <li class=""><a href="/#story">STORY</a></li>
-            <li class=""><a href={{URL::route('index')}}>BLOG</a></li>
+            <li class=""><a href={{URL::route('blog')}}>BLOG</a></li>
             <li class="{{ $current['contact']}}"><a href={{URL::route('contact')}}>Contact</a></li>
           </ul>
                <ul class="nav navbar-nav navbar-right">
-                      <li><a href="#"><span class="fa fa-facebook-square fa-4"></span></a></li>
+                      <li><a class="social" href="#"><span class="fa fa-twitter"></span></a></li>
+                      <li><a class="social" href="#"><span class="fa fa-facebook"></span></a></li>
                       <?php if(Auth::user()->guest()){ ?>
                         <li class="{{ $current['login'] }}"><a href={{URL::route('login')}}><span class="glyphicon glyphicon-user"></span></a></li>
                         <?php } else { ?>
@@ -128,18 +129,27 @@
 
     </div><!-- /.container -->
 
-    <div class="footer">
-        <div class="container text-center">
-          <div class="row text-center">
+<div class="footer">
+    <div class="container text-center">
+        <div class="row text-center">
             <a href="#home"><img class="glyph" width="40" src="img/Kontrol.png"></a>
-          </div>
-          <div class="col-lg-4 text-center">PROJECT</div>
-          <div class="col-lg-4 text-center">LOGO</div>
-          <div class="col-lg-4 text-center">BROWSER</div>
-          <hr class="featurette-divider">
-          <p>© 2014 Kontrol Designer</p>
         </div>
+        <div class="row">
+            <div class="col-lg-4 text-center"><!-- PROJECT --></div>
+
+            <div class="col-lg-4 text-center">
+                <h1>
+                    <a href=""><span class="fa fa-twitter"></span></a>
+                    <a href=""><span class="fa fa-facebook"></span></a>
+                </h1>
+            </div>
+            <div class="col-lg-4 text-center"><!-- BROWSER --></div>
+        </div>
+            <hr class="featurette-divider">
+            <p>© 2014 Kontrol Designer</p>
+
     </div>
+</div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->

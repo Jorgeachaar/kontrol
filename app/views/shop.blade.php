@@ -15,7 +15,7 @@
 @section('container')
 
 <div class="container">
-	<h1>SHOP</h1>
+	<h1>Shop</h1>
 	<hr class="black">
     <ul class="centerlist">
         <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/3.jpg)"><h3>Comentario 1</h3></div></div></a></li>
@@ -32,7 +32,7 @@
 
 @stop
 
-@section('script') 
+@section('script')
 
 @stop
 

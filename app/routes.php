@@ -199,7 +199,7 @@ Route::post('/updatepassword', array('before' => 'csrf', function(){
             $user->password = Hash::make($password);
             $user->save();
             });
-            
+
             $message = '<hr><label class="label label-info">Password cambiado con éxito, ya puedes iniciar sesión</label><hr>';
             return Redirect::to('login')->with('message', $message);
 }));
@@ -215,3 +215,4 @@ App::missing(function($exception)
 
 Route::get('/shop', array('as' => 'shop', 'uses' =>'HomeController@shop'));
 Route::get('/product', array('as' => 'product', 'uses' =>'HomeController@product'));
+Route::get('/blog', array('as' => 'blog', 'uses' =>'HomeController@blog'));
