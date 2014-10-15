@@ -213,6 +213,8 @@ App::missing(function($exception)
 
 /*NUEVOS*/
 
+Route::get('/product/{name}', array('as' => 'product', 'uses' =>'ProductController@product'));
+Route::post('/product/{name}', array('as' => 'product', 'uses' =>'ProductController@addproducttocart'));
+
 Route::get('/shop', array('as' => 'shop', 'uses' =>'HomeController@shop'));
-Route::get('/product', array('as' => 'product', 'uses' =>'HomeController@product'));
 Route::get('/blog', array('as' => 'blog', 'uses' =>'HomeController@blog'));

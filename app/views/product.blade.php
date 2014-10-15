@@ -6,6 +6,7 @@
 	<meta name='description' content='Shop'>
 	<meta name='keywords' content='palabras, clave'>
 	<meta name='robots' content='noindex,nofollow'>
+
 	{{ HTML::style('css/ViewProducto.css') }}
 @stop
 
@@ -68,7 +69,7 @@
 					      </tbody>
 				</table>
 			</div>
-        	<!-- 	TO FIT CHEST	 	TO FIT WAIST	
+        	<!-- 	TO FIT CHEST	 	TO FIT WAIST
 				INCHES	CM	INCHES	CM
 			XS	30 - 32	76 - 81	28 - 30	71 - 76
 			S	34 - 36	86 - 91	30 - 32	76 - 81
@@ -92,48 +93,48 @@
 	<div class="row">
 		<!-- IMAGENEN PRINCIPAL -->
 		<div class="col-lg-6">
-			<img src="img/shop/1.png" class="img-responsive" alt="T-Shir">
+			<img src={{URL::asset('img/shop/1.png')}} class="img-responsive" alt="T-Shir">
 			<!-- THUMBAIN -->
 			<div class="row text-center">
 			  <div class="col-xs-2 col-md-2">
 			    <a href="#" class="thumbnail">
-			      <img data-src="img/shop/1.png" src="img/shop/1.png" alt="...">
+			      <img data-src={{URL::asset('img/shop/1.png')}} src={{URL::asset('img/shop/1.png')}} alt="...">
 			    </a>
 			  </div><div class="col-xs-2 col-md-2">
 			    <a href="#" class="thumbnail">
-			      <img data-src="img/shop/1.png" src="img/shop/2.png" alt="...">
+			      <img data-src={{URL::asset('img/shop/1.png')}} src={{URL::asset('img/shop/2.png')}} alt="...">
 			    </a>
 			  </div><div class="col-xs-2 col-md-2">
 			    <a href="#" class="thumbnail">
-			      <img data-src="img/shop/1.png" src="img/shop/3.png" alt="...">
+			      <img data-src={{URL::asset('img/shop/1.png')}} src={{URL::asset('img/shop/3.png')}} alt="...">
 			    </a>
 			  </div><div class="col-xs-2 col-md-2">
 			    <a href="#" class="thumbnail">
-			      <img data-src="img/shop/1.png" src="img/shop/4.png" alt="...">
+			      <img data-src={{URL::asset('img/shop/1.png')}} src={{URL::asset('img/shop/4.png')}} alt="...">
 			    </a>
 			  </div><div class="col-xs-2 col-md-2">
 			    <a href="#" class="thumbnail">
-			      <img data-src="img/shop/1.png" src="img/shop/5.png" alt="...">
+			      <img data-src={{URL::asset('img/shop/1.png')}} src={{URL::asset('img/shop/5.png')}} alt="...">
 			    </a>
 			  </div>
 			</div><!-- END THUMBAIN -->
 		</div>
-		
+
 		<!-- DESC DE COMPRA -->
 		<div class="col-lg-6 text-left">
 			<div class="producttitle">
 				<h1>Product name</h1>
 				<hr class="black">
-					<h3>  
+					<h3>
 					$45.00
 					<span class="oldprice">$88.00</span>
 					</h3>
 				<hr class="black">
 				<p>Detalle del produto o algun tipo de informaciòn adicional.</p>
-			</div>			
-					
+			</div>
+
 			<label>COUNT</label>
-			<input type="number" class="form-control" placeholder="" value="1"><br>		
+			<input type="number" class="form-control" placeholder="" value="1"><br>
 
 			<label>SIZE <a href=""  data-toggle="modal" data-target="#sizeModal">(WHAT SIZE AM I?)</a></label><br>
 			<div class="btn-group" data-toggle="buttons">
@@ -145,33 +146,33 @@
 					</div>
 				</div>
 				<div id="box">
-					<div class="boxcontenedor">	
+					<div class="boxcontenedor">
 						<label class="btn btn-tool" data-toggle="tooltip" data-placement="top" title="SMALL">
 						 	<input type="radio" name="options" id="option2"> S
 						</label>
 					</div>
 				</div>
 				<div id="box">
-					<div class="boxcontenedor">	
+					<div class="boxcontenedor">
 						<label class="btn btn-tool" data-toggle="tooltip" data-placement="top" title="MEDIUN">
 						  	<input type="radio" name="options" id="option3"> M
 						</label>
 					</div>
 				</div>
 				<div id="box">
-					<div class="boxcontenedor">	
+					<div class="boxcontenedor">
 						<label class="btn btn-tool" data-toggle="tooltip" data-placement="top" title="LARGE">
 						  	<input type="radio" name="options" id="option4"> L
 						</label>
 					</div>
 				</div>
 				<div id="box">
-					<div class="boxcontenedor">	
+					<div class="boxcontenedor">
 						<label class="btn btn-tool" data-toggle="tooltip" data-placement="right" title="S LARGE">
 						  	<input type="radio" name="options" id="option5"> XL
 						</label>
 					</div>
-				</div>	
+				</div>
 			</div><br><br>
      		<a class="btn btn-default" href="#" role="button">add to cart</a>
      		<hr class="black">
@@ -191,7 +192,7 @@
 
 @stop
 
-@section('script') 
+@section('script')
 <script type="text/javascript">
 	$('.btn-tool').tooltip();
 	// $('#sizeModal').modal();

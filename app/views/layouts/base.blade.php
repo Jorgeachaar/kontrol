@@ -72,7 +72,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href={{URL::route('index')}}><img src="img/Kontrol.png">   KTRL</a>
+          <a class="navbar-brand" href={{URL::route('index')}}><img src={{ URL::asset('img/Kontrol.png')}} >   KTRL</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -132,7 +132,7 @@
 <div class="footer">
     <div class="container text-center">
         <div class="row text-center">
-            <a href="#home"><img class="glyph" width="40" src="img/Kontrol.png"></a>
+            <a href="#home"><img class="glyph" width="40" src={{ URL::asset('img/Kontrol.png') }}></a>
         </div>
         <div class="row">
             <div class="col-lg-4 text-center"><!-- PROJECT --></div>
@@ -154,8 +154,9 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/jquery.easing.min.js"></script>
+
+    {{ HTML::script('bootstrap/js/bootstrap.min.js') }}
+    {{ HTML::script('js/jquery.easing.min.js') }}
 
     <!-- EFECTO DE SCROLL -->
     <script type="text/javascript">

@@ -147,11 +147,6 @@ class HomeController extends BaseController {
     	return View::make('shop');
     }
 
-    public function product()
-    {
-    	return View::make('product');
-    }
-
     public function blog()
     {
     	return View::make('blog');

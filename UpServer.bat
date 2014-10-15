@@ -1,7 +1,5 @@
 @echo off
-
-php artisan serve
-echo algun dia este bat levantara el serve
-
-pause
+	php artisan serve
+	echo ****ERROR****
+	pause
 exit
