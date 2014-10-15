@@ -121,6 +121,12 @@
 		</div>
 
 		<!-- DESC DE COMPRA -->
+		{{Form::open(array(
+		                "method" => "POST",
+		                "action" => "ProductController@addproducttocart",
+		                "role" => "form",
+		    ))}}
+
 		<div class="col-lg-6 text-left">
 			<div class="producttitle">
 				<h1>Product name</h1>
@@ -175,6 +181,7 @@
 				</div>
 			</div><br><br>
      		<a class="btn btn-default" href="#" role="button">add to cart</a>
+     		{{Form::input("submit", null, "add to cart", array("class" => "btn btn-default"))}}
      		<hr class="black">
 
      		<p>
@@ -187,6 +194,7 @@
 				-Medium measures 53cm chest / 73cm length.<br>
 				-Machine washable. Do not tumble dry. View inside label for care instructions.<br>
 		</div><!-- END DESC DE PRODUCTO -->
+		{{Form::close()}}
 	</div>
 </div>
 

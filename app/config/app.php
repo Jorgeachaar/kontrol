@@ -124,7 +124,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		'Greggilbert\Recaptcha\RecaptchaServiceProvider',
-
+		'Gloudemans\Shoppingcart\ShoppingcartServiceProvider',
 	),
 
 	/*
@@ -191,7 +191,7 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-
+		'Cart'            => 'Gloudemans\Shoppingcart\Facades\Cart',
 	),
 
 );

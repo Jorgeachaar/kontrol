@@ -19,7 +19,7 @@
                 "method" => "POST",
                 "action" => "HomeController@login",
                 "role" => "form",
-                ))}}
+    ))}}
 
                 <div class="form-group">
                     {{Form::label("Email:")}}

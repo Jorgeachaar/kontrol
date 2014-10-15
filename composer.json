@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"ollieread/multiauth": "dev-master",
-		"greggilbert/recaptcha": "dev-master"
+		"greggilbert/recaptcha": "dev-master",
+		"gloudemans/shoppingcart": "~1.2"
 	},
 	"autoload": {
 		"classmap": [
