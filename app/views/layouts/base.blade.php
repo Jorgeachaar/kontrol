@@ -34,6 +34,10 @@
     @yield('head')
   </head>
 
+<?php
+    $cart = new Carrito();
+?>
+
   <body id="home">
     <?php
             $vista = Route::currentRouteName();
@@ -112,7 +116,7 @@
 
                         <?php } ?>
                         <li><a href="#" class="btn-dangerNO" title="items"><span class ="glyphicon glyphicon-shopping-cart"></span>
-                        <span class="badge badge-cart">{{ Cart::total() }}</span></a></li>
+                        <span class="badge badge-cart">{{ $cart->articulos_total() }} - {{ $cart->precio_total() }}</span></a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

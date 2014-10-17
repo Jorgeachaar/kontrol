@@ -9,7 +9,16 @@ class ProductController extends BaseController {
 
 	public function addproducttocart($name)
 	{
-		Cart::add(array('id' => '293ad', 'name' => 'Product 1', 'qty' => 1, 'price' => 9.99, 'options' => array('size' => 'large')));
+		$carrito = new Carrito();
+
+		$articulo = array(
+		        "id"            => 14,
+		        "cantidad"  => 1,
+		        "precio"     => 50,
+		        "nombre"   => "camisetas"
+		);
+
+		$carrito->add($articulo);
 
 		return View::make('product');
 	}

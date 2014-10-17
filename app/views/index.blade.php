@@ -33,6 +33,7 @@
         </ol>
 
         <!-- Wrapper for Slides -->
+        {{ Cart::destroy()}}
         <div class="carousel-inner">
             <div class="item active">
                 <div class="fill" style="background-image:url('img/2.jpg');"></div>

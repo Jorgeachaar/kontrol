@@ -17,9 +17,6 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-		// $remimdert =  new CreatePasswordRemindersTable;
-		// $remimdert->up();
-
 		return View::make('index');
 	}
 
