@@ -136,13 +136,14 @@
 					<div id="box">
 						<div class="boxcontenedor">
 							<label class="btn btn-tool" data-toggle="tooltip" data-placement="left" title="S SMALL">
-								<input type="radio" name="options" id="option1" checked> {{ strtoupper($size->desc) }}
+								<input type="radio" name="options" id="{{ $size->id }}" checked> {{ strtoupper($size->desc) }}
 							</label>
 						</div>
 					</div>
 				@endforeach
 			</div><br><br>
      		<!-- <a class="btn btn-default" href="#" role="button">add to cart</a> -->
+     		{{ Form::hidden ('id', $product->id) }}
      		{{Form::input("submit", null, "add to cart", array("class" => "btn btn-default"))}}
      		<hr class="black">
 

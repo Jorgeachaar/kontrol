@@ -13,19 +13,33 @@ class ProductController extends BaseController {
 		return $pro ? $view : 'No existe el producto';
 	}
 
-	public function addproducttocart($name)
+	public function addproducttocart()
 	{
-		$carrito = new Carrito();
+		$id = Input::get('id');
+		$prod = Product::find($id);
+		if ($prod)
+		{
+			$carrito = new Carrito();
 
-		$articulo = array(
-		        "id"            => 14,
-		        "cantidad"  => 1,
-		        "precio"     => 50,
-		        "nombre"   => "camisetas"
-		);
+			$articulo = array(
+			        "id"            => $prod->id,
+			        "cantidad"  => 1,
+			        "precio"     => $prod->price,
+			        "nombre"   => $prod->desc
+			);
 
-		$carrito->add($articulo);
+			$carrito->add($articulo);
 
-		return View::make('product');
+			$view = View::make('product');		
+			$view->product = $prod;
+
+			return $prod ? $view : 'No existe el producto';
+		}
+		else
+			return "error";
+
+		
+
+		
 	}
 }
