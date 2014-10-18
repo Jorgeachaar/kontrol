@@ -129,22 +129,24 @@
 @section('container')
 <div class="container">
     <ul class="centerlist grid effect-4" id="grid">
-        <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/3.jpg)"><h3>Comentario 1</h3></div></div></a></li>
-        <br>
-        <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/2.jpg)"><h3>Nueva temporada</h3></div></div></a></li>
-        <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/4.jpg)"><h3>Comentario 1</h3></div></div></a></li>
-        <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/5.jpg)"><h3>COMENTARIO Q!</h3></div></div></a></li>
-        <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/6.jpg)"><h3>KKK</h3></div></div></a></li>
-        <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/7.jpg)"><h3>PUBLICIDAD</h3></div></div></a></li>
-        <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/8.jpg)"><h3>METAL PARA TODOS</h3></div></div></a></li>
-        <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/9.jpg)"><h3>WACHIN!</h3></div></div></a></li>
-        <li><a href="{{URL::route('product')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/9.jpg)"><h3>WACHIN!</h3></div></div></a></li>
+        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/3.jpg)"><h3>Comentario 1</h3></div></div></a></li><br>
+        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/2.jpg)"><h3>Nueva temporada</h3></div></div></a></li>
+        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/4.jpg)"><h3>Comentario 1</h3></div></div></a></li>
+        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/5.jpg)"><h3>COMENTARIO Q!</h3></div></div></a></li>
+        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/6.jpg)"><h3>KKK</h3></div></div></a></li>
+        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/7.jpg)"><h3>PUBLICIDAD</h3></div></div></a></li>
+        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/8.jpg)"><h3>METAL PARA TODOS</h3></div></div></a></li>
+        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/9.jpg)"><h3>WACHIN!</h3></div></div></a></li>
+        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/9.jpg)"><h3>WACHIN!</h3></div></div></a></li>
     </ul>
 </div>
 
 <div id="story" class="container-fluid container-about">
     <div class="container">
-        <div class="col-lg-4 text-center"><h3>The Story  KTRL</h3></div>
+        <div class="col-lg-4 text-center">
+            <h3>The Story  KTRL</h3>
+            <img class="img-responsive" src="{{ URL::asset('img/KontrolBlack.png') }}">
+        </div>
         <div class="col-lg-8">
             <p>
                 Locals Apparel is that lazy hot afternoon when you suddenly feel a cool breeze. Smoky air at some BBQ party. Vague bruises from a awesome ride. Dedicated delicate design. Rather indy than indie. Tanned legs. Daydreams of swaying palms. Working hard and playing harder. A perfect grind. Sun-warmed concrete. Kidney shaped pools. Rebels without causes. Solo but soulful. Venice's winding boardwalks.

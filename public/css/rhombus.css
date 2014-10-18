@@ -38,7 +38,8 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #FFA8A8;
+    color: #585858;
+    /*color: #FFA8A8;*/
 }
 
 

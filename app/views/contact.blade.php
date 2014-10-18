@@ -81,7 +81,7 @@
 		<div class="bg-danger" id="_recaptcha_response_field">{{ $errors->first('recaptcha_response_field') }}</div>
 
 		{{ Form::captcha() }}
-
+		<br>
 		<!--{{ Form::input('submit', null, 'Enviar', array('class' => 'btn-primary')) }}-->
 		{{ Form::input('button', null, 'Enviar', array('class' => 'btn btn-default', 'id' => 'btn')) }}
 

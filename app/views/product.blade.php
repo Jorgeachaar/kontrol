@@ -129,14 +129,14 @@
 
 		<div class="col-lg-6 text-left">
 			<div class="producttitle">
-				<h1>Product name</h1>
+				<h1>{{ $product->desc }}</h1>
 				<hr class="black">
 					<h3>
-					$45.00
-					<span class="oldprice">$88.00</span>
+					${{ $product->price }}
+					<span class="oldprice">${{ $product->old_price }}</span>
 					</h3>
 				<hr class="black">
-				<p>Detalle del produto o algun tipo de informaciòn adicional.</p>
+				<p>{{ $product->desc2 }}</p>
 			</div>
 
 			<label>COUNT</label>
@@ -180,19 +180,11 @@
 					</div>
 				</div>
 			</div><br><br>
-     		<a class="btn btn-default" href="#" role="button">add to cart</a>
+     		<!-- <a class="btn btn-default" href="#" role="button">add to cart</a> -->
      		{{Form::input("submit", null, "add to cart", array("class" => "btn btn-default"))}}
      		<hr class="black">
 
-     		<p>
-     			This stone knitted crewneck sweater has an applied patch design on the front and on the left sleeve.
-				Also features a woven neck label with an inserted size tag.
-     		</p>
-
-				-100% Cotton.<br>
-				-Model is 5'11" and is wearing a Medium.<br>
-				-Medium measures 53cm chest / 73cm length.<br>
-				-Machine washable. Do not tumble dry. View inside label for care instructions.<br>
+     		{{ $product->desc3 }}
 		</div><!-- END DESC DE PRODUCTO -->
 		{{Form::close()}}
 	</div>
