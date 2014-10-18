@@ -1,3 +1,5 @@
++Descripcion en la tabla SIZE // AGREGAR EL DETALLE DE EN CM PULGADAS DE LOS TALLES
++Eligir cual va a ser la imagen principal del producto
 +efecto parallax
 *El menu principal del index es diferente a las otras pages 
 +Lupa al articulo de la imagen para ver mejor la imagen

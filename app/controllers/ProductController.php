@@ -4,8 +4,7 @@ class ProductController extends BaseController {
 
 	public function product($id)
 	{
-		//return $pro ? $pro->category->desc : "No existe el articulo";
-		// return Category::find(1)->products->count();
+		// return Product::find($id)->images->first()->url_img;
 		
 		$view = View::make('product');		
 		$pro = Product::find($id);

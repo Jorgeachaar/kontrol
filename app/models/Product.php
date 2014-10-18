@@ -10,4 +10,14 @@ class Product extends Eloquent {
 		return $this->belongsTo('Category', 'category_id');
 	}
 
+	public function sizes()
+	{
+		return $this->belongsToMany('Size');
+	}
+
+	public function images()
+	{
+		return $this->hasMany('ProductImg', 'product_id');
+	}
+
 }

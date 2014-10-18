@@ -90,35 +90,23 @@
 @section('container')
 
 <div class="container">
-	<div class="row">
+	<div class="row text-center">
 		<!-- IMAGENEN PRINCIPAL -->
-		<div class="col-lg-6">
-			<img src={{URL::asset('img/shop/1.png')}} class="img-responsive" alt="T-Shir">
-			<!-- THUMBAIN -->
-			<div class="row text-center">
-			  <div class="col-xs-2 col-md-2">
-			    <a href="#" class="thumbnail">
-			      <img data-src={{URL::asset('img/shop/1.png')}} src={{URL::asset('img/shop/1.png')}} alt="...">
-			    </a>
-			  </div><div class="col-xs-2 col-md-2">
-			    <a href="#" class="thumbnail">
-			      <img data-src={{URL::asset('img/shop/1.png')}} src={{URL::asset('img/shop/2.png')}} alt="...">
-			    </a>
-			  </div><div class="col-xs-2 col-md-2">
-			    <a href="#" class="thumbnail">
-			      <img data-src={{URL::asset('img/shop/1.png')}} src={{URL::asset('img/shop/3.png')}} alt="...">
-			    </a>
-			  </div><div class="col-xs-2 col-md-2">
-			    <a href="#" class="thumbnail">
-			      <img data-src={{URL::asset('img/shop/1.png')}} src={{URL::asset('img/shop/4.png')}} alt="...">
-			    </a>
-			  </div><div class="col-xs-2 col-md-2">
-			    <a href="#" class="thumbnail">
-			      <img data-src={{URL::asset('img/shop/1.png')}} src={{URL::asset('img/shop/5.png')}} alt="...">
-			    </a>
-			  </div>
-			</div><!-- END THUMBAIN -->
-		</div>
+		@if($product->images->count() > 0)
+			<div class="col-lg-6">
+				<img src={{URL::asset('img/products/'. $product->images->first()->url_img)}} class="img-responsive" alt="T-Shir">
+				<!-- THUMBAIN -->
+				<div class="row">
+					@foreach ($product->images as $image)
+						<div class="col-xs-2 col-md-2">
+							<a href="#" class="thumbnail">
+								<img data-src={{URL::asset('img/products/'. $image->url_img)}} src={{URL::asset('img/products/'. $image->url_img)}} alt="...">
+							</a>
+						</div>
+					@endforeach
+				</div><!-- END THUMBAIN -->
+			</div>
+		@endif
 
 		<!-- DESC DE COMPRA -->
 		{{Form::open(array(
@@ -144,41 +132,15 @@
 
 			<label>SIZE <a href=""  data-toggle="modal" data-target="#sizeModal">(WHAT SIZE AM I?)</a></label><br>
 			<div class="btn-group" data-toggle="buttons">
-				<div id="box">
-					<div class="boxcontenedor">
-						<label class="btn btn-tool" data-toggle="tooltip" data-placement="left" title="S SMALL">
-							<input type="radio" name="options" id="option1" checked> XS
-						</label>
+				@foreach ($product->sizes as $size)
+					<div id="box">
+						<div class="boxcontenedor">
+							<label class="btn btn-tool" data-toggle="tooltip" data-placement="left" title="S SMALL">
+								<input type="radio" name="options" id="option1" checked> {{ strtoupper($size->desc) }}
+							</label>
+						</div>
 					</div>
-				</div>
-				<div id="box">
-					<div class="boxcontenedor">
-						<label class="btn btn-tool" data-toggle="tooltip" data-placement="top" title="SMALL">
-						 	<input type="radio" name="options" id="option2"> S
-						</label>
-					</div>
-				</div>
-				<div id="box">
-					<div class="boxcontenedor">
-						<label class="btn btn-tool" data-toggle="tooltip" data-placement="top" title="MEDIUN">
-						  	<input type="radio" name="options" id="option3"> M
-						</label>
-					</div>
-				</div>
-				<div id="box">
-					<div class="boxcontenedor">
-						<label class="btn btn-tool" data-toggle="tooltip" data-placement="top" title="LARGE">
-						  	<input type="radio" name="options" id="option4"> L
-						</label>
-					</div>
-				</div>
-				<div id="box">
-					<div class="boxcontenedor">
-						<label class="btn btn-tool" data-toggle="tooltip" data-placement="right" title="S LARGE">
-						  	<input type="radio" name="options" id="option5"> XL
-						</label>
-					</div>
-				</div>
+				@endforeach
 			</div><br><br>
      		<!-- <a class="btn btn-default" href="#" role="button">add to cart</a> -->
      		{{Form::input("submit", null, "add to cart", array("class" => "btn btn-default"))}}
