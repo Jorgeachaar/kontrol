@@ -219,3 +219,5 @@ Route::post('/product/', array('as' => 'product', 'uses' =>'ProductController@ad
 
 Route::get('/shop', array('as' => 'shop', 'uses' =>'HomeController@shop'));
 Route::get('/blog', array('as' => 'blog', 'uses' =>'HomeController@blog'));
+
+Route::get('/cart', array('as' => 'cart', 'uses' =>'HomeController@cart'));

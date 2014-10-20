@@ -149,6 +149,11 @@ class HomeController extends BaseController {
     	return View::make('blog');
     }
 
+    public function cart()
+    {
+    	return View::make('cart');
+    }
+
 
 
 }

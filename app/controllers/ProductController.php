@@ -33,7 +33,7 @@ class ProductController extends BaseController {
 			$view = View::make('product');		
 			$view->product = $prod;
 
-			return $prod ? $view : 'No existe el producto';
+			return $prod ? Redirect::back() : 'No existe el producto';
 		}
 		else
 			return "error";
