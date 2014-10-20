@@ -129,7 +129,7 @@
 @section('container')
 <div class="container">
     <ul class="centerlist grid effect-4" id="grid">
-        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/3.jpg)"><h3>Comentario 1</h3></div></div></a></li><br>
+        <li><a href="{{URL::to('product/3')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/3.jpg)"><h3>Comentario 1</h3></div></div></a></li><br>
         <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/2.jpg)"><h3>Nueva temporada</h3></div></div></a></li>
         <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/4.jpg)"><h3>Comentario 1</h3></div></div></a></li>
         <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/5.jpg)"><h3>COMENTARIO Q!</h3></div></div></a></li>

@@ -1,7 +1,7 @@
 +Descripcion en la tabla SIZE // AGREGAR EL DETALLE DE EN CM PULGADAS DE LOS TALLES
 +Eligir cual va a ser la imagen principal del producto
 +efecto parallax
-*El menu principal del index es diferente a las otras pages 
+*El menu principal del index es diferente a las otras pages
 +Lupa al articulo de la imagen para ver mejor la imagen
 +Efecto en el rombo cuando aparece las letreas no sea tan brusco
 +Buscar
@@ -23,6 +23,7 @@ https://bootstrapmade.com/themes/category/html-template/business-corporate/
 http://www.prepbootstrap.com/
 http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/bootstrap-breadcrumbs.php
 
+http://nicolette.ro/sapphire-html/checkout.html
 http://es.abercrombie.com/shop/wd/mens-classic-fit
 http://bashooka.com/inspiration/shopping-cart-page-designs-inspiration/
 http://www.vandelaydesign.com/best-ecommerce-website-designs/

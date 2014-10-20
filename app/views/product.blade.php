@@ -113,7 +113,7 @@
 		                "method" => "POST",
 		                "action" => "ProductController@addproducttocart",
 		                "role" => "form",
-		    ))}}
+		))}}
 
 		<div class="col-lg-6 text-left">
 			<div class="producttitle">
