@@ -226,6 +226,7 @@ class Carrito
 
 
 
+
 	//método que retorna el precio total del carrito
 
 	public function precio_total()
@@ -324,7 +325,21 @@ class Carrito
 
 	}
 
+	public function ModifyCountItem($unique_id, $count)
+	{
 
+		$item = $this->carrito[$unique_id];
+		$item['cantidad'] = $count;
+
+		$_SESSION['carrito'][$unique_id]['cantidad'] = $count; 
+		// throw new Exception("El carrito no existe!". $_SESSION['carrito'][$unique_id]['id'] , 1);
+		
+		$this->update_carrito();
+
+		$this->update_precio_cantidad();
+
+		return true;
+	}
 
 	//método que llamamos al insertar un nuevo producto al
 

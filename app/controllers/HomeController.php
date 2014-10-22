@@ -156,10 +156,12 @@ class HomeController extends BaseController {
 
     public function updatecart()
     {
-        $arraysss = Input::All();
-        return $arraysss;
+        $id_unique = Input::get('unique_id');
+        $count    = Input::get('count');
 
-
+        $cart = new Carrito();        
+        $cart->ModifyCountItem($id_unique, $count);
+        // return "Id: " . $id_unique . " Cantidad: " . $count;
         return View::make('cart');
     }
 

@@ -351,3 +351,22 @@ hr.black
     background-color: #818181;
     border-color: #000;
  }
+
+
+ .btn-link
+ {
+  color: #000;
+ }
+
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus {
+  outline: 0;
+  outline: 0px auto -webkit-focus-ring-color;
+  outline-offset: 0px;
+}
+.btn:hover,
+.btn:focus {
+  color: #818181;
+  text-decoration: none;
+}
