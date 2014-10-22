@@ -221,3 +221,11 @@ Route::get('/shop', array('as' => 'shop', 'uses' =>'HomeController@shop'));
 Route::get('/blog', array('as' => 'blog', 'uses' =>'HomeController@blog'));
 
 Route::get('/cart', array('as' => 'cart', 'uses' =>'HomeController@cart'));
+Route::post('/cart', array('as' => 'updatecart', 'uses' =>'HomeController@updatecart'));
+Route::get('/checkout', array('as' => 'checkout', 'uses' =>'HomeController@checkout'));
+
+//CARRITO
+//ELIMINA PRODUCTO
+Route::get('/deleteproducttocart/{id}', array('as' => 'deleteproducttocart', 'uses' =>'ProductController@deleteproducttocart'));
+
+

@@ -121,9 +121,9 @@ class HomeController extends BaseController {
 	}
 
 	public function Confirmregister()
-    {
+        {
 
-    }
+        }
 
     public function Recoverpassword()
     {
@@ -152,6 +152,21 @@ class HomeController extends BaseController {
     public function cart()
     {
     	return View::make('cart');
+    }
+
+    public function updatecart()
+    {
+        $arraysss = Input::All();
+        return $arraysss;
+
+
+        return View::make('cart');
+    }
+
+    public function checkout()
+    {
+        return "checkaout";
+        return View::make('cart');
     }
 
 

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href={{ URL::asset('img/KontrolBlack.png') }}>
+    <link rel="icon" href={{ URL::asset('img/KontrolB.png') }}>
 
     <link href='http://fonts.googleapis.com/css?family=Raleway:300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Khand' rel='stylesheet' type='text/css'>
@@ -111,8 +111,6 @@
                                   </li>
                               </ul>
                           </li>
-
-
 
                         <?php } ?>
                         <li><a href="{{ URL::route('cart') }}" class="btn-dangerNO" title="items"><span class ="glyphicon glyphicon-shopping-cart"></span>

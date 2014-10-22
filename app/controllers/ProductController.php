@@ -5,8 +5,8 @@ class ProductController extends BaseController {
 	public function product($id)
 	{
 		// return Product::find($id)->images->first()->url_img;
-		
-		$view = View::make('product');		
+
+		$view = View::make('product');
 		$pro = Product::find($id);
 		$view->product = $pro;
 
@@ -30,16 +30,23 @@ class ProductController extends BaseController {
 
 			$carrito->add($articulo);
 
-			$view = View::make('product');		
+			$view = View::make('product');
 			$view->product = $prod;
 
 			return $prod ? Redirect::back() : 'No existe el producto';
 		}
 		else
 			return "error";
+	}
 
-		
+	public function deleteproducttocart($idUnique)
+	{
+		$cart = new Carrito();
 
-		
+		$cart->remove_producto($idUnique);
+
+		// return View::make('cart');
+		return Redirect::back();
+
 	}
 }
