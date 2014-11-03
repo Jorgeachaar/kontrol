@@ -229,3 +229,26 @@ Route::get('/checkout', array('as' => 'checkout', 'uses' =>'HomeController@check
 Route::get('/deleteproducttocart/{id}', array('as' => 'deleteproducttocart', 'uses' =>'ProductController@deleteproducttocart'));
 
 
+
+Route::group(array('auth_user' => 'auth'), function()
+{
+    //PRODUCT
+    Route::get('admin/product', array('as' => 'admin/products', 'uses' => 'AdminController@showProducts'));
+
+    Route::get('admin/product/new', array('uses' => 'AdminController@newProduct'));
+    Route::post('admin/product/new', array('uses' => 'AdminController@postNewProduct'));
+
+    Route::get('admin/product/{id}', array('uses' => 'AdminController@showProduct'));
+
+
+    // Route::get('/', function()
+    // {
+    //    // Tiene el filtro Auth
+    // });
+
+    // Route::get('user/profile', function()
+    // {
+    //     // Tiene el filtro Auth
+    // });
+});
+

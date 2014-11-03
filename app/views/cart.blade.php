@@ -22,7 +22,7 @@
 		@if($cart->articulos_total() > 0)
 			<?php $items = $cart->get_content(); ?>
 
-			<table class="table table-striped">
+			<table class="table table-condensed">
 				<thead>
 					<tr>
 						<!-- <th></th> -->
@@ -45,7 +45,7 @@
 						          <!-- <th class="text-nowrap"> <a href="{{URL::to('product/'.$item["id"])}}">{{ $item["id"] }}</a> </th> -->
 						          <td><a href="{{URL::to('product/'.$item["id"])}}">{{ $item["nombre"] }}</a></td>
 							<td>
-								<div class="col-xs-4">
+								<div class="col-xs-4 table-input">
 									{{ Form::input('text', 'count', $item["cantidad"], array('class' => 'form-control')) }}
 								</div>
 							</td>
@@ -61,11 +61,7 @@
 			          </tbody>
 			</table>
 			<div class="row text-right">
-				<a class="btn btn-default" href="{{URL::route('updatecart')}}" role="button">UPDATE</a>
 				<a class="btn btn-default" href="{{URL::route('checkout')}}" role="button">CHECKOUT</a>
-
-				{{Form::input("submit", null, "Iniciar sesión", array("class" => "btn btn-default"))}}
-				
 			</div>
 		@else
 			<p>No tiene ningún artículo ingresado en el carrito.</p>

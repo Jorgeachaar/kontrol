@@ -370,3 +370,8 @@ hr.black
   color: #818181;
   text-decoration: none;
 }
+
+.table-input
+{
+  padding: 0px;
+}
