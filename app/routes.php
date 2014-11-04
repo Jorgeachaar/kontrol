@@ -237,6 +237,7 @@ Route::group(array('auth_user' => 'auth'), function()
 
     Route::get('admin/product/new', array('uses' => 'AdminController@newProduct'));
     Route::post('admin/product/new', array('uses' => 'AdminController@postNewProduct'));
+    Route::post('admin/product/edit', array('uses' => 'AdminController@postEditProduct'));
 
     Route::get('admin/product/{id}', array('uses' => 'AdminController@showProduct'));
 

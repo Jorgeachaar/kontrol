@@ -10,17 +10,23 @@
 
 @section('container')
 
+	<?php 
+		$Editing = $product->id != "";
+
+		$Title = $Editing ? "Producto: ". $product->id ." - " . $product->desc : "Nuevo Producto";
+		$action = $Editing ? "AdminController@postEditProduct" : "AdminController@postNewProduct";
+	?>
+
 <div class="container">
 	@if ($product)
 		{{Form::open(array(
-			'action' => 'AdminController@postNewProduct',
+			'action' => $action,
 			'method' => 'POST',
 			'role' => 'form',
 			'id' => 'form',
 			))
 		}}
-			<h1>Producto: {{$product->id}} - {{$product->desc}}</h1>
-
+			<h1>{{$Title}}</h1>
 
 			<div class="form-group">
 				{{ Form::label('Desc: ') }}
@@ -28,6 +34,11 @@
 				<div class="bg-danger" id="_desc">{{ $errors->first('desc') }}</div>
 			</div>
 
+			<div class="form-group">
+				{{ Form::label('Categoria: ') }} <br>
+				{{ Form::select('categorys', $categorys, $categorySelected) }}
+				<div class="bg-danger" id="_desc">{{ $errors->first('desc') }}</div>
+			</div>
 
 			<div class="form-group">
 				{{ Form::label('Desc2: ') }}
@@ -61,14 +72,15 @@
 						<?php
 							$auxSize = $product->sizes->find($size->id);
 						?>
-						{{ Form::checkbox('sizes[]', $size->id, $auxSize); }} {{ $size->desc; }}
-
-						<!-- <input type="checkbox" name="sizes" value="{{ $size->id }}"> {{ $size->desc }} -->
+						{{ Form::checkbox($size->desc, $size->id, $auxSize); }} {{ $size->desc; }}
 					</label>
 				@endforeach
 			</div>
 
+			<h1>Stock</h1>
 			<h1>IMAGENES</h1>
+
+			{{Form::input("hidden", "id", $product->id)}}
 
 			{{ Form::input('submit', null, 'Aceptar', array('class' => 'btn btn-default', 'id' => 'btn')) }}
 
