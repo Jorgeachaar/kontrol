@@ -10,7 +10,7 @@
 
 @section('container')
 
-	<?php 
+	<?php
 		$Editing = $product->id != "";
 
 		$Title = $Editing ? "Producto: ". $product->id ." - " . $product->desc : "Nuevo Producto";
@@ -24,6 +24,7 @@
 			'method' => 'POST',
 			'role' => 'form',
 			'id' => 'form',
+			'files' => true
 			))
 		}}
 			<h1>{{$Title}}</h1>
@@ -78,7 +79,10 @@
 			</div>
 
 			<h1>Stock</h1>
+
 			<h1>IMAGENES</h1>
+			{{Form::file('image');}} <br>
+			{{ Form::input('button', null, 'Cargar Imagen', array('class' => 'btn btn-default', 'id' => 'btn')) }}
 
 			{{Form::input("hidden", "id", $product->id)}}
 

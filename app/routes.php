@@ -230,7 +230,7 @@ Route::get('/deleteproducttocart/{id}', array('as' => 'deleteproducttocart', 'us
 
 
 
-Route::group(array('auth_user' => 'auth'), function()
+Route::group(array('before' => 'auth_user'), function()
 {
     //PRODUCT
     Route::get('admin/product', array('as' => 'admin/products', 'uses' => 'AdminController@showProducts'));
