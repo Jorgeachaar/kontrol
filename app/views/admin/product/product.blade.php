@@ -80,9 +80,12 @@
 
 			<h1>Stock</h1>
 
-			<h1>IMAGENES</h1>
-			{{Form::file('image');}} <br>
-			{{ Form::input('button', null, 'Cargar Imagen', array('class' => 'btn btn-default', 'id' => 'btn')) }}
+			<div class="form-group">
+				{{ Form::label('Imagenes: ') }}
+				{{Form::file('image', array('id' => 'image'));}} <br>
+				{{ Form::input('button', null, 'Cargar Imagen', array('class' => 'btn btn-default', 'id' => 'updateimage')) }}
+				<div class="bg-danger" id="_oldprice">{{ $errors->first('oldprice') }}</div>
+			</div>
 
 			{{Form::input("hidden", "id", $product->id)}}
 
@@ -96,5 +99,18 @@
 
 
 </div>
+
+@stop
+
+
+@section('script')
+
+	<script type="text/javascript">
+		$('#updateimage').click(function(){
+			var input = document.getElementById ("image");
+            		alert (input.value);
+		});
+
+	</script>
 
 @stop

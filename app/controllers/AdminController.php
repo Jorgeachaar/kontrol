@@ -8,18 +8,18 @@ class AdminController extends BaseController {
 
 		return View::make('admin.product.list')->with('products', $products);
 	}
-	
+
 	private function ShowPrductBy($prod)
 	{
 		$sizes = Size::all();
 		$categorys = Category::all()->lists('desc', 'id');
 		$categorySelected = $prod->category_id;
-		
+
 		return View::make('admin.product.product')
 						->with('product', $prod)
 						->with('sizes', $sizes)
 						->with('categorys', $categorys)
-						->with('categorySelected', $categorySelected);	
+						->with('categorySelected', $categorySelected);
 	}
 
 	public function showProduct($id)
@@ -80,18 +80,20 @@ class AdminController extends BaseController {
 		$editproduct->desc3 = $Desc3;
 		$editproduct->price = $price;
 		$editproduct->old_price = $oldprice;
+
 		//SAVE CATEGORY
 		$editproduct->category_id = $categorySelected;
+
 		//SAVE SIZE
 		$sizes = Size::all();
 		$editproduct->sizes()->detach();
-		foreach ($sizes as $size) 
+		foreach ($sizes as $size)
 		{
 			$auxSizes = Input::get($size->desc);
-			if ($auxSizes) 
+			if ($auxSizes)
 			{
 				$editproduct->sizes()->attach($auxSizes);
-			}			
+			}
 		}
 
 		$editproduct->save();
