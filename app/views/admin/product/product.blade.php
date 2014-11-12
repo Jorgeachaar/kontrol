@@ -20,11 +20,11 @@
 <div class="container">
 	@if ($product)
 		{{Form::open(array(
-			'action' => $action,
-			'method' => 'POST',
-			'role' => 'form',
-			'id' => 'form',
-			'files' => true
+				'action' => $action,
+				'method' => 'POST',
+				'role' => 'form',
+				'id' => 'form',
+				'files' => true
 			))
 		}}
 			<h1>{{$Title}}</h1>
@@ -78,14 +78,34 @@
 				@endforeach
 			</div>
 
-			<h1>Stock</h1>
-
 			<div class="form-group">
-				{{ Form::label('Imagenes: ') }}
-				{{Form::file('image', array('id' => 'image'));}} <br>
-				{{ Form::input('button', null, 'Cargar Imagen', array('class' => 'btn btn-default', 'id' => 'updateimage')) }}
-				<div class="bg-danger" id="_oldprice">{{ $errors->first('oldprice') }}</div>
+				{{ Form::label('Stock: ') }}
+				{{ Form::input('number', 'stock', $product->stock, array('class' => 'form-control')) }}
+				<div class="bg-danger" id="_stock">{{ $errors->first('stock') }}</div>
 			</div>
+
+
+			@if ($Editing)
+				{{ Form::open(array('url' => 'upload', 'files' => true)) }}
+
+						<div class="form-group">
+							{{ Form::label('Imagenes: ') }}
+							{{Form::file('image', array('id' => 'image'));}} <br>
+							{{ Form::submit('Regístrarme', array("class" => "btn btn-default")) }}
+							{{ Form::input('button', null, 'Cargar Imagen', array('class' => 'btn btn-default', 'id' => 'updateimage')) }}
+							<div class="bg-danger" id="_oldprice">{{ $errors->first('oldprice') }}</div>
+							<br>
+						</div>
+
+					          @foreach ($product->images as $img)
+							<img src="../../img/products/{{ $img->url_img }}"> <br>
+						@endforeach
+						<br />
+
+
+				{{ Form::close() }}
+
+			@endif
 
 			{{Form::input("hidden", "id", $product->id)}}
 
