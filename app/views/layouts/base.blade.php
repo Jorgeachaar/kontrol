@@ -155,7 +155,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
 
     {{ HTML::script('bootstrap/js/bootstrap.min.js') }}
     {{ HTML::script('js/jquery.easing.min.js') }}

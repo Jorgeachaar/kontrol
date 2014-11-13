@@ -240,6 +240,7 @@ Route::group(array('before' => 'auth_user'), function()
     Route::post('admin/product/edit', array('uses' => 'AdminController@postEditProduct'));
 
     Route::get('admin/product/{id}', array('uses' => 'AdminController@showProduct'));
+    Route::post('admin/prueba', array('uses' => 'AdminController@Prueba'));
 
 
     // Route::get('/', function()

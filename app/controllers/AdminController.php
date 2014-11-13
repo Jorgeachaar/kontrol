@@ -36,29 +36,38 @@ class AdminController extends BaseController {
 
 	public function postNewProduct()
 	{
+		$Id = Input::get('id');
 		$Desc = Input::get('desc');
 		$Desc2 = Input::get('desc2');
 		$Desc3 = Input::get('desc3');
 		$price = Input::get('price');
 		$oldprice = Input::get('oldprice');
-		$sizes = Input::get('sizes');
+		$categorySelected = Input::get('categorys');
+		$stock = Input::get('stock');
+		$editproduct = Product::find($Id);
 
+		$editproduct->desc = $Desc;
+		$editproduct->desc2 = $Desc2;
+		$editproduct->desc3 = $Desc3;
+		$editproduct->price = $price;
+		$editproduct->old_price = $oldprice;
+		$editproduct->stock = $stock;
+		//SAVE CATEGORY
+		$editproduct->category_id = $categorySelected;
+		//SAVE SIZE
+		$sizes = Size::all();
+		$editproduct->sizes()->detach();
 
-			//Size: ". $sizes[] . "<br>
-			// foreach ($sizes as $size) {
-			// 	$result = $result . $size->value;
-			// }
+		foreach ($sizes as $size)
+		{
+			$auxSizes = Input::get($size->desc);
+			if ($auxSizes)
+			{
+				$editproduct->sizes()->attach($auxSizes);
+			}
+		}
 
-		$newproduct = new Product;
-
-		$newproduct->desc = $Desc;
-		$newproduct->desc2 = $Desc2;
-		$newproduct->desc3 = $Desc3;
-		$newproduct->price = $price;
-		$newproduct->old_price = $oldprice;
-		$newproduct->category_id = 1;
-
-		$newproduct->save();
+		$editproduct->save();
 
 		return Redirect::to('admin/product');
 	}
@@ -72,7 +81,7 @@ class AdminController extends BaseController {
 		$price = Input::get('price');
 		$oldprice = Input::get('oldprice');
 		$categorySelected = Input::get('categorys');
-
+		$stock = Input::get('stock');
 		$editproduct = Product::find($Id);
 
 		$editproduct->desc = $Desc;
@@ -80,10 +89,9 @@ class AdminController extends BaseController {
 		$editproduct->desc3 = $Desc3;
 		$editproduct->price = $price;
 		$editproduct->old_price = $oldprice;
-
+		$editproduct->stock = $stock;
 		//SAVE CATEGORY
 		$editproduct->category_id = $categorySelected;
-
 		//SAVE SIZE
 		$sizes = Size::all();
 		$editproduct->sizes()->detach();
@@ -113,6 +121,33 @@ class AdminController extends BaseController {
 		{
 		    //
 		}
+	}
+
+	public function Prueba()
+	{
+		$id = Input::get('id');
+		$file = Input::file('imagehh');
+		$data = Input::all();
+
+		$PATH = 'public/img/products';
+		$FileName = $file->getClientOriginalName();
+
+		$file->move($PATH , $id . "_" . $FileName );
+
+		$img = new ProductImg;
+		$img->url_img = $FileName;
+		$img->desc = $FileName;
+		$img->product_id = $id;
+
+		$img->save();
+
+		$product = Product::find($id);
+		$imgProd = $product->images;
+
+		return Response::json(array(
+			'success'    => true,
+			'product'  => $imgProd,
+		));
 	}
 
 

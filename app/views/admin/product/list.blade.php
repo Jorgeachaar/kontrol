@@ -74,8 +74,8 @@
 			return false;
 		});
 
-		$("#Delete_ok").click(function() {
-
+		$("#Delete_ok").click(function()
+		{
 			$('#myModal').modal('hide');
 			return false;
 		});

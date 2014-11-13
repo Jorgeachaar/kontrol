@@ -23,7 +23,7 @@
 				'action' => $action,
 				'method' => 'POST',
 				'role' => 'form',
-				'id' => 'form',
+				'id' => 'formProduct',
 				'files' => true
 			))
 		}}
@@ -65,7 +65,6 @@
 				<div class="bg-danger" id="_oldprice">{{ $errors->first('oldprice') }}</div>
 			</div>
 
-
 			<div class="form-group">
 				{{ Form::label('Size: ') }} <br>
 				@foreach ($sizes as $size)
@@ -84,32 +83,37 @@
 				<div class="bg-danger" id="_stock">{{ $errors->first('stock') }}</div>
 			</div>
 
-
+			<!--
 			@if ($Editing)
 				{{ Form::open(array('url' => 'upload', 'files' => true)) }}
-
+			-->
 						<div class="form-group">
 							{{ Form::label('Imagenes: ') }}
-							{{Form::file('image', array('id' => 'image'));}} <br>
-							{{ Form::submit('Regístrarme', array("class" => "btn btn-default")) }}
-							{{ Form::input('button', null, 'Cargar Imagen', array('class' => 'btn btn-default', 'id' => 'updateimage')) }}
-							<div class="bg-danger" id="_oldprice">{{ $errors->first('oldprice') }}</div>
-							<br>
+							{{Form::file('imagehh', array('id' => 'imageLoad'));}} <br>
 						</div>
 
+					          <!--
 					          @foreach ($product->images as $img)
-							<img src="../../img/products/{{ $img->url_img }}"> <br>
+							<div class="row">
+								<div class="col-xs-6 col-md-3">
+									<a href="#" class="thumbnail">
+									<img src="../../img/products/{{ $img->url_img }}">
+
+									</a>
+								</div>
+							</div>
 						@endforeach
 						<br />
+						-->
 
-
-				{{ Form::close() }}
+				<!--
+				{{ Form::close() }}-->
 
 			@endif
 
 			{{Form::input("hidden", "id", $product->id)}}
 
-			{{ Form::input('submit', null, 'Aceptar', array('class' => 'btn btn-default', 'id' => 'btn')) }}
+			{{ Form::submit('Aceptar', array('class' => 'btn btn-default', 'id' => 'btn')) }}
 
 		{{Form::close()}}
 	@else
@@ -126,10 +130,52 @@
 @section('script')
 
 	<script type="text/javascript">
-		$('#updateimage').click(function(){
-			var input = document.getElementById ("image");
-            		alert (input.value);
-		});
+		// $('#updateimage').click(function(){
+		// 	var input = document.getElementById ("image");
+  //           		alert (input.value);
+		// });
+
+
+		$("#imageLoad").change(function() {
+			var form = $('#formProduct');
+			var FData = new FormData(form[0]);
+
+			$.ajax({
+				type: 'POST',
+				//url: 'AdminController@Prueba',
+				url: '../prueba',
+				dataType: 'json',
+				processData: false,
+				contentType: false,
+				data: FData, //$('#formProduct').serialize(),
+				beforeSend: function(){
+					//$('.before').append('<img src="imgs/350.gif" />');
+				},
+				complete: function(data){
+					//alert(data.message);
+				},
+				success: function (data) {
+					var Prod = data.product;
+
+					for(var i=0; i< Prod.length; i++) {
+						alert(Prod[i].desc);
+					}
+
+					$('.thumb').each(function (i) {
+					    $(this).click(function () {
+					        alert (i+1); //index starts with 0, so add 1 if you want 1 first
+					    });
+					});
+
+					console.log("innnn:: " + Prod);
+				},
+				error: function(errors){
+					alert("ERROR: " + errors);
+					console.log(errors);
+				}
+			});
+			       return false;
+    		});
 
 	</script>
 
