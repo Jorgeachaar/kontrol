@@ -241,6 +241,7 @@ Route::group(array('before' => 'auth_user'), function()
 
     Route::get('admin/product/{id}', array('uses' => 'AdminController@showProduct'));
     Route::post('admin/prueba', array('uses' => 'AdminController@Prueba'));
+    Route::post('admin/deleteimage/{id}', array('uses' => 'AdminController@DeleteImage'));
 
 
     // Route::get('/', function()

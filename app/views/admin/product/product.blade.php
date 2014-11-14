@@ -87,30 +87,35 @@
 			@if ($Editing)
 				{{ Form::open(array('url' => 'upload', 'files' => true)) }}
 			-->
+			<button type="button" class="" data-toggle="collapse" data-target="#demo" aria-expanded="true" aria-controls="demo">
+				Ver Imagenes
+			</button>
+			<div id="demo" class="collapse in">
 						<div class="form-group">
 							{{ Form::label('Imagenes: ') }}
 							{{Form::file('imagehh', array('id' => 'imageLoad'));}} <br>
 						</div>
 
-					          <!--
-					          @foreach ($product->images as $img)
+						<div class="imagenes container">
 							<div class="row">
-								<div class="col-xs-6 col-md-3">
-									<a href="#" class="thumbnail">
-									<img src="../../img/products/{{ $img->url_img }}">
-
-									</a>
+					          @foreach ($product->images as $img)
+								<div class="col-xs-6 col-md-3 thumb">
+									<button class="close">x</button>
+									<!-- <a href="#" class="thumbnail"> -->
+									<img class="img-responsive" src="../../img/products/{{ $img->url_img }}" data-id="{{ $img->id }}">
+									<!-- </a> -->
 								</div>
-							</div>
 						@endforeach
-						<br />
-						-->
+							</div>
+						</div>
+			</div>
 
 				<!--
 				{{ Form::close() }}-->
 
 			@endif
 
+			<br />
 			{{Form::input("hidden", "id", $product->id)}}
 
 			{{ Form::submit('Aceptar', array('class' => 'btn btn-default', 'id' => 'btn')) }}
@@ -122,7 +127,9 @@
 
 
 
+
 </div>
+
 
 @stop
 
@@ -130,12 +137,50 @@
 @section('script')
 
 	<script type="text/javascript">
-		// $('#updateimage').click(function(){
-		// 	var input = document.getElementById ("image");
-  //           		alert (input.value);
-		// });
 
+		function CargarImagenes (imagenes) {
+			var DivImg = "";
+			for(var i=0; i< imagenes.length; i++) {
+				// alert(Prod[i].id);
+				//DivImg = DivImg + '<div class="row"><div class="col-xs-6 col-md-3"><button class="close">x</button><img src="../../img/products/'+ imagenes[i].url_img +' data-id='+ imagenes[i].id +' ></div></div>';
+				DivImg = DivImg + '<div class="col-xs-6 col-md-3 thumb">';
+				DivImg = DivImg + 	'<button class="close">x</button>';
+				DivImg = DivImg + 	'<img class="img-responsive" src="../../img/products/' +imagenes[i].url_img+ ' " data-id=" ' +imagenes[i].id+' ">';
+				DivImg = DivImg +'</div>';
+			}
+			$('.imagenes').html(DivImg);
+			BotonClose();
+		}
 
+		function BotonClose(){
+			$('.close').click(function() {
+				var imgDelete = $(this).next();
+				var IDimg = $(imgDelete).data('id');
+
+				$.ajax({
+					type: 'POST',
+					url: '../deleteimage/'+IDimg,
+					dataType: 'json',
+					processData: false,
+					contentType: false,
+					success: function (data) {
+						if (data.success)
+						{
+							CargarImagenes(data.images);
+						}
+					},
+					error: function(errors){
+						alert("ERROR: " + errors);
+						console.log(errors);
+					}
+				});
+				return false;
+			});
+		}
+
+		BotonClose();
+
+		//AGREGA NUEVA IMAGEN
 		$("#imageLoad").change(function() {
 			var form = $('#formProduct');
 			var FData = new FormData(form[0]);
@@ -155,27 +200,23 @@
 					//alert(data.message);
 				},
 				success: function (data) {
-					var Prod = data.product;
-
-					for(var i=0; i< Prod.length; i++) {
-						alert(Prod[i].desc);
-					}
-
-					$('.thumb').each(function (i) {
-					    $(this).click(function () {
-					        alert (i+1); //index starts with 0, so add 1 if you want 1 first
-					    });
-					});
-
-					console.log("innnn:: " + Prod);
+					$('.imagenes').html('');
+					CargarImagenes(data.product);
 				},
 				error: function(errors){
 					alert("ERROR: " + errors);
 					console.log(errors);
 				}
 			});
-			       return false;
+			return false;
     		});
+
+
+
+
+
+
+
 
 	</script>
 

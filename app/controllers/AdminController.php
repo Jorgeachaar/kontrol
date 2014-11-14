@@ -135,7 +135,7 @@ class AdminController extends BaseController {
 		$file->move($PATH , $id . "_" . $FileName );
 
 		$img = new ProductImg;
-		$img->url_img = $FileName;
+		$img->url_img = $id . "_" . $FileName;
 		$img->desc = $FileName;
 		$img->product_id = $id;
 
@@ -150,6 +150,26 @@ class AdminController extends BaseController {
 		));
 	}
 
+	public function DeleteImage($id)
+	{
+		$resultado = false;
 
+		$img = ProductImg::find($id);
+		$urlImg = 'public/img/products/' . $img->url_img;
+		$Exists  = File::exists($urlImg);
+
+		if ($img && $Exists && File::delete($urlImg))
+		{
+			$img->delete();
+			$imgs = Product::find($img->product_id)->images;
+			$resultado = true;
+
+		}
+
+		return Response::json(array(
+			'success'    => $resultado,
+			'images'  => $imgs,
+		));
+	}
 
 }
