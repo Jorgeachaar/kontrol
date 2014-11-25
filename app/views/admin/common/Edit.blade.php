@@ -10,13 +10,6 @@
 
 @section('container')
 
-	<?php
-		$Editing = $product->id != "";
-
-		$Title = $Editing ? "Producto: ". $product->id ." - " . $product->desc : "Nuevo Producto";
-		$action = $Editing ? "AdminController@postEditProduct" : "AdminController@postNewProduct";
-	?>
-
 <div class="container">
 	@if ($product)
 		{{Form::open(array(
@@ -30,97 +23,22 @@
 			<h1>{{$Title}}</h1>
 			<hr class="black">
 
-			<div class="form-group">
-				{{ Form::label('Desc: ') }}
-				{{ Form::input('desc', 'desc', $product->desc, array('class' => 'form-control')) }}
-				<div class="bg-danger" id="_desc">{{ $errors->first('desc') }}</div>
-			</div>
-
-			<div class="form-group">
-				{{ Form::label('Categoria: ') }} <br>
-				{{ Form::select('categorys', $categorys, $categorySelected) }}
-				<div class="bg-danger" id="_desc">{{ $errors->first('desc') }}</div>
-			</div>
-
-			<div class="form-group">
-				{{ Form::label('Desc2: ') }}
-				{{ Form::input('desc2', 'desc2', $product->desc2, array('class' => 'form-control')) }}
-				<div class="bg-danger" id="_desc2">{{ $errors->first('desc2') }}</div>
-			</div>
-
-			<div class="form-group">
-				{{ Form::label('Desc3: ') }}
-				{{ Form::textarea('desc3', $product->desc3, array('class' => 'form-control')) }}
-				<div class="bg-danger" id="_desc3">{{ $errors->first('desc3') }}</div>
-			</div>
-
-			<div class="form-group">
-				{{ Form::label('Price: ') }}
-				{{ Form::input('number', 'price', $product->price, array('class' => 'form-control')) }}
-				<div class="bg-danger" id="_price">{{ $errors->first('price') }}</div>
-			</div>
-
-			<div class="form-group">
-				{{ Form::label('Old price: ') }}
-				{{ Form::input('number', 'oldprice', $product->old_price, array('class' => 'form-control')) }}
-				<div class="bg-danger" id="_oldprice">{{ $errors->first('oldprice') }}</div>
-			</div>
-
-			<div class="form-group">
-				{{ Form::label('Size: ') }} <br>
-				@foreach ($sizes as $size)
-					<label class="checkbox-inline">
-						<?php
-							$auxSize = $product->sizes->find($size->id);
-						?>
-						{{ Form::checkbox($size->desc, $size->id, $auxSize); }} {{ $size->desc; }}
-					</label>
-				@endforeach
-			</div>
-
-			<div class="form-group">
-				{{ Form::label('Stock: ') }}
-				{{ Form::input('number', 'stock', $product->stock, array('class' => 'form-control')) }}
-				<div class="bg-danger" id="_stock">{{ $errors->first('stock') }}</div>
-			</div>
-
-			@if ($Editing)
-				<button type="button" class="" data-toggle="collapse" data-target="#demo" aria-expanded="true" aria-controls="demo">
-					Ver Imagenes
-				</button>
-				<div id="demo" class="collapse in">
+			@foreach ($FieldTypes as $FieldType => $value)
+				@if ($value == 'text')
 					<div class="form-group">
-						{{ Form::label('Imagenes: ') }}
-						{{Form::file('imagehh', array('id' => 'imageLoad'));}} <br>
+						{{ Form::label($FieldType . ': ') }}
+						{{ Form::input('desc', 'desc', $product->$FieldType, array('class' => 'form-control')) }}
+						<div class="bg-danger" id="_{{ $FieldType}}">{{ $errors->first($FieldType) }}</div>
 					</div>
-
-					<div class="imagenes container">
-						<div class="row">
-				          @foreach ($product->images as $img)
-							<div class="col-xs-6 col-md-3 thumb">
-								<button class="close"><span class="glyphicon glyphicon-remove"></span></button>
-								@if ($img->main)
-									<span class="glyphicon glyphicon-eye-open mainImg"></span>
-								@else
-									<span class="glyphicon glyphicon-eye-close mainImg"></span>
-								@endif
-								<!-- <a href="#" class="thumbnail"> -->
-								<img class="img-responsive" src="../../img/products/{{ $img->url_img }}" data-id="{{ $img->id }}">
-								<!-- </a> -->
-							</div>
-					@endforeach
-						</div>
-					</div>
-				</div>
-			@endif
+				@endif
+			@endforeach
 
 			<br /><hr class="black">
-			{{Form::input("hidden", "id", $product->id)}}
-			{{Form::input("hidden", "Editing", $Editing)}}
+			{{Form::input("hidden", "id", $product->$keyfield)}}
 
 			{{ Form::submit('Aceptar', array('class' => 'btn btn-default', 'id' => 'btn')) }}
 			{{ Form::submit('Guardad y seguir editando', array('class' => 'btn btn-default', 'name' => 'action')) }}
-			<a href="{{ URL::to('admin/product') }}" class="btn btn-default" role="button">Cancelar</a>
+			<a href="{{ URL::to($urlCancel) }}" class="btn btn-default" role="button">Cancelar</a>
 
 		{{Form::close()}}
 	@else
@@ -246,14 +164,6 @@
 			});
 			return false;
     		});
-
-
-
-
-
-
-
-
 	</script>
 
 @stop

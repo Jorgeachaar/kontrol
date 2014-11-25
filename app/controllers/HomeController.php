@@ -1,3 +1,4 @@
+
 <?php
 
 class HomeController extends BaseController {
@@ -17,7 +18,8 @@ class HomeController extends BaseController {
 
 	public function showWelcome()
 	{
-		return View::make('index');
+                $products = Product::all();
+	   return View::make('index')->with('products', $products);
 	}
 
 	public function contacto()
@@ -141,7 +143,10 @@ class HomeController extends BaseController {
 
     public function shop()
     {
-    	return View::make('shop');
+        $products = Product::all();
+        return View::make('shop')
+        ->with("products", $products)
+        ;
     }
 
     public function blog()
@@ -159,7 +164,7 @@ class HomeController extends BaseController {
         $id_unique = Input::get('unique_id');
         $count    = Input::get('count');
 
-        $cart = new Carrito();        
+        $cart = new Carrito();
         $cart->ModifyCountItem($id_unique, $count);
         // return "Id: " . $id_unique . " Cantidad: " . $count;
         return View::make('cart');

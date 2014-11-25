@@ -232,6 +232,15 @@ Route::get('/deleteproducttocart/{id}', array('as' => 'deleteproducttocart', 'us
 
 Route::group(array('before' => 'auth_user'), function()
 {
+    //CATEGORY
+    Route::get('admin/category', array('as' => 'admin/categorys', 'uses' => 'CategoryController@showCategory'));
+    Route::post('admin/category/ShowList', array('as' => 'admin/category/ShowList', 'uses' => 'CategoryController@ShowList'));
+    Route::get('admin/category/new', array('as' => 'admin/categorys/new', 'uses' => 'CategoryController@NewCateogry'));
+    Route::get('admin/category/edit/{id}', array('as' => 'admin/categorys/edit/{id}', 'uses' => 'CategoryController@EditCateogry'));
+    Route::post('admin/category/save', array('as' => 'admin/categorys/save', 'uses' => 'CategoryController@save'));
+    Route::post('admin/category/delete/{id}', array('as' => 'admin/category/delete/{id}', 'uses' => 'CategoryController@delete'));
+    Route::get('admin/category/delete/{id}', array('as' => 'admin/category/delete/{id}', 'uses' => 'CategoryController@delete'));
+
     //PRODUCT
     Route::get('admin/product', array('as' => 'admin/products', 'uses' => 'AdminController@showProducts'));
 
@@ -242,6 +251,7 @@ Route::group(array('before' => 'auth_user'), function()
     Route::get('admin/product/{id}', array('uses' => 'AdminController@showProduct'));
     Route::post('admin/prueba', array('uses' => 'AdminController@Prueba'));
     Route::post('admin/deleteimage/{id}', array('uses' => 'AdminController@DeleteImage'));
+    Route::post('admin/setmain/{id}', array('uses' => 'AdminController@SetMain'));
 
 
     // Route::get('/', function()

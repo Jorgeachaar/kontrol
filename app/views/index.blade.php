@@ -129,17 +129,28 @@
 @section('container')
 <div class="container">
     <ul class="centerlist grid effect-4" id="grid">
-        <li><a href="{{URL::to('product/3')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/3.jpg)"><h3>Comentario 1</h3></div></div></a></li><br>
-        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/2.jpg)"><h3>Nueva temporada</h3></div></div></a></li>
-        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/4.jpg)"><h3>Comentario 1</h3></div></div></a></li>
-        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/5.jpg)"><h3>COMENTARIO Q!</h3></div></div></a></li>
-        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/6.jpg)"><h3>KKK</h3></div></div></a></li>
-        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/7.jpg)"><h3>PUBLICIDAD</h3></div></div></a></li>
-        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/8.jpg)"><h3>METAL PARA TODOS</h3></div></div></a></li>
-        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/9.jpg)"><h3>WACHIN!</h3></div></div></a></li>
-        <li><a href="{{URL::to('product/1')}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/list/9.jpg)"><h3>WACHIN!</h3></div></div></a></li>
+        <?php $band = true; ?>
+        @foreach ($products as $prod)
+            <?php
+                $urlImage = $prod->images()->where('main', '=', true)->first();
+                if($urlImage)
+                {
+                    $urlImage = $urlImage["url_img"];
+                }
+                else
+                {
+                    $urlImage =$prod->images[0]->url_img;
+                }
+            ?>
+            <li><a href="{{URL::to('product/'.$prod->id)}}"><div id="box"><div class="boxcontenedor" style="background-image:url(../img/products/{{ $urlImage }})"><h3>{{ $prod->desc }}</h3></div></div></a></li>
+            @if ($band)
+                <br>
+                <?php  $band =false; ?>
+            @endif
+        @endforeach
     </ul>
 </div>
+
 
 <div id="story" class="container-fluid container-about">
     <div class="container">

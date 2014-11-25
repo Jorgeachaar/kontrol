@@ -94,9 +94,10 @@
 		<!-- IMAGENEN PRINCIPAL -->
 		@if($product->images->count() > 0)
 			<div class="col-lg-6">
-				<img src={{URL::asset('img/products/'. $product->images->first()->url_img)}} class="img-responsive" alt="T-Shir">
+				<img src={{URL::asset('img/products/'. $product->images()->where('main', '=', true)->first()->url_img)}} class="img-responsive" alt="T-Shir"  id="mainImage">
 				<!-- THUMBAIN -->
 				<div class="row">
+
 					@foreach ($product->images as $image)
 						<div class="col-xs-2 col-md-2">
 							<a href="#" class="thumbnail">
@@ -159,6 +160,12 @@
 <script type="text/javascript">
 	$('.btn-tool').tooltip();
 	// $('#sizeModal').modal();
+
+	$("a.thumbnail img").click(function() {
+		datasrc = $(this).data('src');
+		$('#mainImage').attr('src', datasrc);
+		return false;
+	});
 </script>
 @stop
 

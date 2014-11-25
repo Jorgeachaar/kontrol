@@ -44,7 +44,8 @@ class AdminController extends BaseController {
 		$oldprice = Input::get('oldprice');
 		$categorySelected = Input::get('categorys');
 		$stock = Input::get('stock');
-		$editproduct = Product::find($Id);
+
+		$editproduct = new Product;
 
 		$editproduct->desc = $Desc;
 		$editproduct->desc2 = $Desc2;
@@ -56,6 +57,10 @@ class AdminController extends BaseController {
 		$editproduct->category_id = $categorySelected;
 		//SAVE SIZE
 		$sizes = Size::all();
+
+
+		$editproduct->save();
+
 		$editproduct->sizes()->detach();
 
 		foreach ($sizes as $size)
@@ -67,9 +72,15 @@ class AdminController extends BaseController {
 			}
 		}
 
-		$editproduct->save();
-
-		return Redirect::to('admin/product');
+		$SeguirEditando =  Input::get('action');
+		if ($SeguirEditando == 'Guardad y seguir editando')
+		{
+			return Redirect::to('admin/product/'.$editproduct->id);
+		}
+		else
+		{
+			return Redirect::to('admin/product');
+		}
 	}
 
 	public function postEditProduct()
@@ -92,6 +103,9 @@ class AdminController extends BaseController {
 		$editproduct->stock = $stock;
 		//SAVE CATEGORY
 		$editproduct->category_id = $categorySelected;
+
+		$editproduct->save();
+
 		//SAVE SIZE
 		$sizes = Size::all();
 		$editproduct->sizes()->detach();
@@ -104,9 +118,15 @@ class AdminController extends BaseController {
 			}
 		}
 
-		$editproduct->save();
-
-		return Redirect::to('admin/product');
+		$SeguirEditando =  Input::get('action');
+		if ($SeguirEditando == 'Guardad y seguir editando')
+		{
+			return Redirect::to('admin/product/'.$Id);
+		}
+		else
+		{
+			return Redirect::to('admin/product');
+		}
 	}
 
 	public function deleteProduct($id)
@@ -150,6 +170,31 @@ class AdminController extends BaseController {
 		));
 	}
 
+	public function SetMain($id)
+	{
+		$resultado = true;
+
+		$img = ProductImg::find($id);
+		$idProd = Product::find($img->product_id);
+		$images =  $idProd->images;
+
+		foreach ($images as $image) {
+			$image->main = false;
+			$image->save();
+		}
+
+		$img->main = true;
+		$img->save();
+
+		$idProd = Product::find($img->product_id);
+		$imagessx =  $idProd->images;
+
+		return Response::json(array(
+			'success'    => $resultado,
+			'images'   => $imagessx,
+		));
+	}
+
 	public function DeleteImage($id)
 	{
 		$resultado = false;
@@ -158,12 +203,16 @@ class AdminController extends BaseController {
 		$urlImg = 'public/img/products/' . $img->url_img;
 		$Exists  = File::exists($urlImg);
 
-		if ($img && $Exists && File::delete($urlImg))
+		if ($img)
 		{
+			if ($Exists)
+			{
+				File::delete($urlImg);
+			}
+
 			$img->delete();
 			$imgs = Product::find($img->product_id)->images;
 			$resultado = true;
-
 		}
 
 		return Response::json(array(
